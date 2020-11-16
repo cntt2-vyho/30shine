@@ -1,0 +1,644 @@
+{
+    "message": "Success",
+    "count": 64,
+    "data": [
+        {
+            "cityId": 1,
+            "totalSalon": 43,
+            "cityName": "HCM",
+            "districtModels": [
+                {
+                    "districtId": 3,
+                    "totalSalon": 1,
+                    "districtName": "H.Củ Chi"
+                },
+                {
+                    "districtId": 6,
+                    "totalSalon": 1,
+                    "districtName": "Quận 1"
+                },
+                {
+                    "districtId": 7,
+                    "totalSalon": 2,
+                    "districtName": "Quận 2"
+                },
+                {
+                    "districtId": 9,
+                    "totalSalon": 1,
+                    "districtName": "Quận 4"
+                },
+                {
+                    "districtId": 10,
+                    "totalSalon": 2,
+                    "districtName": "Quận 5"
+                },
+                {
+                    "districtId": 11,
+                    "totalSalon": 2,
+                    "districtName": "Quận 6"
+                },
+                {
+                    "districtId": 12,
+                    "totalSalon": 3,
+                    "districtName": "Quận 7"
+                },
+                {
+                    "districtId": 13,
+                    "totalSalon": 1,
+                    "districtName": "Quận 8"
+                },
+                {
+                    "districtId": 14,
+                    "totalSalon": 2,
+                    "districtName": "Quận 9"
+                },
+                {
+                    "districtId": 15,
+                    "totalSalon": 3,
+                    "districtName": "Quận 10"
+                },
+                {
+                    "districtId": 16,
+                    "totalSalon": 1,
+                    "districtName": "Quận 11"
+                },
+                {
+                    "districtId": 17,
+                    "totalSalon": 3,
+                    "districtName": "Quận 12"
+                },
+                {
+                    "districtId": 18,
+                    "totalSalon": 4,
+                    "districtName": "Q.Tân Bình"
+                },
+                {
+                    "districtId": 19,
+                    "totalSalon": 3,
+                    "districtName": "Q.Bình Thạnh"
+                },
+                {
+                    "districtId": 20,
+                    "totalSalon": 4,
+                    "districtName": "Q.Gò Vấp"
+                },
+                {
+                    "districtId": 21,
+                    "totalSalon": 2,
+                    "districtName": "Q.Phú Nhuận"
+                },
+                {
+                    "districtId": 22,
+                    "totalSalon": 2,
+                    "districtName": "Q.Bình Tân"
+                },
+                {
+                    "districtId": 23,
+                    "totalSalon": 3,
+                    "districtName": "Q.Tân Phú"
+                },
+                {
+                    "districtId": 24,
+                    "totalSalon": 3,
+                    "districtName": "Q.Thủ Đức"
+                }
+            ]
+        },
+        {
+            "cityId": 62,
+            "totalSalon": 21,
+            "cityName": "Hà Nội",
+            "districtModels": [
+                {
+                    "districtId": 235,
+                    "totalSalon": 4,
+                    "districtName": "Q. Cầu Giấy"
+                },
+                {
+                    "districtId": 236,
+                    "totalSalon": 1,
+                    "districtName": "Q. Hoàn Kiếm"
+                },
+                {
+                    "districtId": 237,
+                    "totalSalon": 1,
+                    "districtName": "Q. Hoàng Mai"
+                },
+                {
+                    "districtId": 238,
+                    "totalSalon": 2,
+                    "districtName": "Q. Long Biên"
+                },
+                {
+                    "districtId": 240,
+                    "totalSalon": 3,
+                    "districtName": "Q. Thanh Xuân"
+                },
+                {
+                    "districtId": 246,
+                    "totalSalon": 3,
+                    "districtName": "Q. Hà Đông"
+                },
+                {
+                    "districtId": 249,
+                    "totalSalon": 1,
+                    "districtName": "Q. Ba Đình"
+                },
+                {
+                    "districtId": 250,
+                    "totalSalon": 3,
+                    "districtName": "Q. Hai Bà Trưng"
+                },
+                {
+                    "districtId": 251,
+                    "totalSalon": 3,
+                    "districtName": "Q. Đống Đa"
+                }
+            ]
+        },
+        {
+            "cityId": 50,
+            "totalSalon": 5,
+            "cityName": "Bình Dương",
+            "districtModels": [
+                {
+                    "districtId": 26,
+                    "totalSalon": 1,
+                    "districtName": "Dĩ An"
+                },
+                {
+                    "districtId": 29,
+                    "totalSalon": 2,
+                    "districtName": "Thủ Dầu Một"
+                },
+                {
+                    "districtId": 30,
+                    "totalSalon": 2,
+                    "districtName": "Thuận An"
+                }
+            ]
+        },
+        {
+            "cityId": 42,
+            "totalSalon": 4,
+            "cityName": "Đồng Nai",
+            "districtModels": [
+                {
+                    "districtId": 602,
+                    "totalSalon": 4,
+                    "districtName": "TP. Biên Hòa"
+                }
+            ]
+        },
+        {
+            "cityId": 61,
+            "totalSalon": 2,
+            "cityName": "Cần Thơ",
+            "districtModels": [
+                {
+                    "districtId": 208,
+                    "totalSalon": 2,
+                    "districtName": "Quận Ninh Kiều"
+                }
+            ]
+        },
+        {
+            "cityId": 7,
+            "totalSalon": 1,
+            "cityName": "Tiền Giang",
+            "districtModels": [
+                {
+                    "districtId": 521,
+                    "totalSalon": 1,
+                    "districtName": "Tp Mỹ Tho"
+                }
+            ]
+        },
+        {
+            "cityId": 9,
+            "totalSalon": 1,
+            "cityName": "Thanh Hóa",
+            "districtModels": [
+                {
+                    "districtId": 478,
+                    "totalSalon": 1,
+                    "districtName": "TP. Thanh Hóa"
+                }
+            ]
+        },
+        {
+            "cityId": 10,
+            "totalSalon": 1,
+            "cityName": "Thái Nguyên",
+            "districtModels": [
+                {
+                    "districtId": 502,
+                    "totalSalon": 1,
+                    "districtName": "Tp Thái Nguyên"
+                }
+            ]
+        },
+        {
+            "cityId": 16,
+            "totalSalon": 1,
+            "cityName": "Quảng Ninh",
+            "districtModels": [
+                {
+                    "districtId": 436,
+                    "totalSalon": 1,
+                    "districtName": "Tp Hạ Long"
+                }
+            ]
+        },
+        {
+            "cityId": 24,
+            "totalSalon": 1,
+            "cityName": "Nghệ An",
+            "districtModels": [
+                {
+                    "districtId": 643,
+                    "totalSalon": 1,
+                    "districtName": "Tp. Vinh"
+                }
+            ]
+        },
+        {
+            "cityId": 26,
+            "totalSalon": 1,
+            "cityName": "Long An",
+            "districtModels": [
+                {
+                    "districtId": 359,
+                    "totalSalon": 1,
+                    "districtName": "Tân An"
+                }
+            ]
+        },
+        {
+            "cityId": 32,
+            "totalSalon": 1,
+            "cityName": "Kiên Giang",
+            "districtModels": [
+                {
+                    "districtId": 345,
+                    "totalSalon": 1,
+                    "districtName": "Tp Rạch Giá"
+                }
+            ]
+        },
+        {
+            "cityId": 33,
+            "totalSalon": 1,
+            "cityName": "Khánh Hòa",
+            "districtModels": [
+                {
+                    "districtId": 321,
+                    "totalSalon": 1,
+                    "districtName": "TP. Nha Trang"
+                }
+            ]
+        },
+        {
+            "cityId": 45,
+            "totalSalon": 1,
+            "cityName": "Đắk Lắc",
+            "districtModels": [
+                {
+                    "districtId": 585,
+                    "totalSalon": 1,
+                    "districtName": "TP Buôn Ma Thuột"
+                }
+            ]
+        },
+        {
+            "cityId": 47,
+            "totalSalon": 1,
+            "cityName": "Cà Mau",
+            "districtModels": [
+                {
+                    "districtId": 203,
+                    "totalSalon": 1,
+                    "districtName": "Tp Cà Mau"
+                }
+            ]
+        },
+        {
+            "cityId": 53,
+            "totalSalon": 1,
+            "cityName": "Bắc Ninh",
+            "districtModels": [
+                {
+                    "districtId": 112,
+                    "totalSalon": 1,
+                    "districtName": "Tp Bắc Ninh"
+                }
+            ]
+        },
+        {
+            "cityId": 57,
+            "totalSalon": 1,
+            "cityName": "Vũng Tàu",
+            "districtModels": [
+                {
+                    "districtId": 157,
+                    "totalSalon": 1,
+                    "districtName": "TP. Vũng Tàu"
+                }
+            ]
+        },
+        {
+            "cityId": 58,
+            "totalSalon": 1,
+            "cityName": "An Giang",
+            "districtModels": [
+                {
+                    "districtId": 42,
+                    "totalSalon": 1,
+                    "districtName": "Long Xuyên"
+                }
+            ]
+        },
+        {
+            "cityId": 59,
+            "totalSalon": 1,
+            "cityName": "Hải Phòng",
+            "districtModels": [
+                {
+                    "districtId": 313,
+                    "totalSalon": 1,
+                    "districtName": "Quận Lê Chân"
+                }
+            ]
+        },
+        {
+            "cityId": 60,
+            "totalSalon": 1,
+            "cityName": "Đà Nẵng",
+            "districtModels": [
+                {
+                    "districtId": 572,
+                    "totalSalon": 1,
+                    "districtName": "Quận Thanh Khê"
+                }
+            ]
+        },
+        {
+            "cityId": 2,
+            "totalSalon": 0,
+            "cityName": "Yên Bái",
+            "districtModels": []
+        },
+        {
+            "cityId": 3,
+            "totalSalon": 0,
+            "cityName": "Vĩnh Phúc",
+            "districtModels": []
+        },
+        {
+            "cityId": 4,
+            "totalSalon": 0,
+            "cityName": "Vĩnh Long",
+            "districtModels": []
+        },
+        {
+            "cityId": 5,
+            "totalSalon": 0,
+            "cityName": "Tuyên Quang",
+            "districtModels": []
+        },
+        {
+            "cityId": 6,
+            "totalSalon": 0,
+            "cityName": "Trà Vinh",
+            "districtModels": []
+        },
+        {
+            "cityId": 8,
+            "totalSalon": 0,
+            "cityName": "Thừa Thiên Huế",
+            "districtModels": []
+        },
+        {
+            "cityId": 11,
+            "totalSalon": 0,
+            "cityName": "Thái Bình",
+            "districtModels": []
+        },
+        {
+            "cityId": 12,
+            "totalSalon": 0,
+            "cityName": "Tây Ninh",
+            "districtModels": []
+        },
+        {
+            "cityId": 13,
+            "totalSalon": 0,
+            "cityName": "Sơn La",
+            "districtModels": []
+        },
+        {
+            "cityId": 14,
+            "totalSalon": 0,
+            "cityName": "Sóc Trăng",
+            "districtModels": []
+        },
+        {
+            "cityId": 15,
+            "totalSalon": 0,
+            "cityName": "Quảng Trị",
+            "districtModels": []
+        },
+        {
+            "cityId": 17,
+            "totalSalon": 0,
+            "cityName": "Quảng Ngãi",
+            "districtModels": []
+        },
+        {
+            "cityId": 18,
+            "totalSalon": 0,
+            "cityName": "Quảng Nam",
+            "districtModels": []
+        },
+        {
+            "cityId": 19,
+            "totalSalon": 0,
+            "cityName": "Quảng Bình",
+            "districtModels": []
+        },
+        {
+            "cityId": 20,
+            "totalSalon": 0,
+            "cityName": "Phú Yên",
+            "districtModels": []
+        },
+        {
+            "cityId": 21,
+            "totalSalon": 0,
+            "cityName": "Phú Thọ",
+            "districtModels": []
+        },
+        {
+            "cityId": 22,
+            "totalSalon": 0,
+            "cityName": "Ninh Thuận",
+            "districtModels": []
+        },
+        {
+            "cityId": 23,
+            "totalSalon": 0,
+            "cityName": "Ninh Bình",
+            "districtModels": []
+        },
+        {
+            "cityId": 25,
+            "totalSalon": 0,
+            "cityName": "Nam Định",
+            "districtModels": []
+        },
+        {
+            "cityId": 27,
+            "totalSalon": 0,
+            "cityName": "Lào Cai",
+            "districtModels": []
+        },
+        {
+            "cityId": 28,
+            "totalSalon": 0,
+            "cityName": "Lạng Sơn",
+            "districtModels": []
+        },
+        {
+            "cityId": 29,
+            "totalSalon": 0,
+            "cityName": "Lâm Đồng",
+            "districtModels": []
+        },
+        {
+            "cityId": 30,
+            "totalSalon": 0,
+            "cityName": "Lai Châu",
+            "districtModels": []
+        },
+        {
+            "cityId": 31,
+            "totalSalon": 0,
+            "cityName": "Kon Tum",
+            "districtModels": []
+        },
+        {
+            "cityId": 34,
+            "totalSalon": 0,
+            "cityName": "Hưng Yên",
+            "districtModels": []
+        },
+        {
+            "cityId": 35,
+            "totalSalon": 0,
+            "cityName": "Hòa Bình",
+            "districtModels": []
+        },
+        {
+            "cityId": 36,
+            "totalSalon": 0,
+            "cityName": "Hậu Giang",
+            "districtModels": []
+        },
+        {
+            "cityId": 37,
+            "totalSalon": 0,
+            "cityName": "Hải Dương",
+            "districtModels": []
+        },
+        {
+            "cityId": 38,
+            "totalSalon": 0,
+            "cityName": "Hà Tĩnh",
+            "districtModels": []
+        },
+        {
+            "cityId": 39,
+            "totalSalon": 0,
+            "cityName": "Hà Giang",
+            "districtModels": []
+        },
+        {
+            "cityId": 40,
+            "totalSalon": 0,
+            "cityName": "Hà Nam",
+            "districtModels": []
+        },
+        {
+            "cityId": 41,
+            "totalSalon": 0,
+            "cityName": "Đồng Tháp",
+            "districtModels": []
+        },
+        {
+            "cityId": 43,
+            "totalSalon": 0,
+            "cityName": "Điện Biên",
+            "districtModels": []
+        },
+        {
+            "cityId": 44,
+            "totalSalon": 0,
+            "cityName": "Đắk Nông",
+            "districtModels": []
+        },
+        {
+            "cityId": 46,
+            "totalSalon": 0,
+            "cityName": "Cao Bằng",
+            "districtModels": []
+        },
+        {
+            "cityId": 48,
+            "totalSalon": 0,
+            "cityName": "Bình Thuận",
+            "districtModels": []
+        },
+        {
+            "cityId": 49,
+            "totalSalon": 0,
+            "cityName": "Bình Phước",
+            "districtModels": []
+        },
+        {
+            "cityId": 51,
+            "totalSalon": 0,
+            "cityName": "Bình Định",
+            "districtModels": []
+        },
+        {
+            "cityId": 52,
+            "totalSalon": 0,
+            "cityName": "Bến Tre",
+            "districtModels": []
+        },
+        {
+            "cityId": 54,
+            "totalSalon": 0,
+            "cityName": "Bạc Liêu",
+            "districtModels": []
+        },
+        {
+            "cityId": 55,
+            "totalSalon": 0,
+            "cityName": "Bắc Kạn",
+            "districtModels": []
+        },
+        {
+            "cityId": 56,
+            "totalSalon": 0,
+            "cityName": "Bắc Giang",
+            "districtModels": []
+        },
+        {
+            "cityId": 79,
+            "totalSalon": 0,
+            "cityName": "Gia Lai",
+            "districtModels": []
+        }
+    ]
+}
