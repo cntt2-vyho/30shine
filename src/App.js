@@ -24,8 +24,8 @@ export default class App extends Component {
 
                         <Route exact path="/" component={Slider} />
                         {/* <Route exact path="/" component={Home} /> */}
-                        <Route exact path="/findSalon" component={FindSalon} />
-                        <Route exact path="/services" component={Services} />
+                        <Route exact path="/booking=phone/:phone" component={FindSalon} />
+                        <Route exact path="//booking/phone=/:phone/salonId=/:salonId" component={Services} />
                         {/* <Route  path="/servives" component={Information} /> */}
 
                         <Route exact path="/choose-stylelist-and-options" component={StyleListAndOptions} />
