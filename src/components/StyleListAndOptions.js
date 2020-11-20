@@ -1,22 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Information from './Information';
 
 class StyleListAndOptions extends Component {
     render() {
         return (
-            <div className="booking">
-                <div className="body">
-                    <div className="step">
-                        <div id="step-list">
-                            <div className="step-item"><span className="step-item__step">1</span><span className="step-item__title">Chọn
-            salon</span></div>
-                            <div className="step-item"><span className="step-item__step">2</span><span className="step-item__title">Chọn
-            dịch vụ</span></div>
-                            <div className="step-item"><span className="step-item__step active">3</span><span className="step-item__title">Chọn stylist</span></div>
-                            <div className="step-item"><span className="step-item__step">4</span><span className="step-item__title">Hoàn
-            tất</span></div>
-                        </div>
-                    </div>
+            <Fragment >
+                    
                     <div className="date-time">
                         <div className="time-aciton">
                             <div className="day">
@@ -266,9 +255,7 @@ class StyleListAndOptions extends Component {
                         </div>
                     </div>
                     <Information />
-                    <div />
-                </div>
-            </div>
+            </Fragment>
 
         )
     }

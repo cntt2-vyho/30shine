@@ -18,7 +18,7 @@ export default class Slider extends Component {
                         </div><img src="https://v3.30shine.org/data/images/pre1.png" alt="IconNext" className="swiper-button-prev" /><img src="https://v3.30shine.org/data/images/next1.png" alt="IconPrev" className="swiper-button-next" />
                     </div>
 
-                    <Home />
+                    <Home history={this.props.history} />
                     
                 </div>
                 

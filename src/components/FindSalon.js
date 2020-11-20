@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
+import qs from "query-string";
+
 
 class FindSalon extends Component {
     render() {
-        return (
-            <div className="booking">
-                <div className="body">
-                    <div className="step">
-                        <div id="step-list">
-                            <div className="step-item"><span className="step-item__step active">1</span><span className="step-item__title">Chọn salon</span></div>
-                            <div className="step-item"><span className="step-item__step">2</span><span className="step-item__title">Chọn
-            dịch vụ</span></div>
-                            <div className="step-item"><span className="step-item__step">3</span><span className="step-item__title">Chọn
-            stylist</span></div>
-                            <div className="step-item"><span className="step-item__step">4</span><span className="step-item__title">Hoàn
-            tất</span></div>
-                        </div>
-                    </div>
+        
+    return (
+            
                     <div className="box-salon bg-white">
                         <div className="select-salon">
                             <div className="content shadown br-2">
@@ -227,9 +218,7 @@ class FindSalon extends Component {
                         </div>
                         <div className />
                     </div>
-                    <div />
-                </div>
-            </div>
+               
 
         )
     }
