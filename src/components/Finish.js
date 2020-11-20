@@ -1,22 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Information from './Information';
 
 class Finish extends Component {
     render() {
         return (
-            <div className="booking">
-                <div className="body">
-                    <div className="step">
-                        <div id="step-list">
-                            <div className="step-item"><span className="step-item__step">1</span><span className="step-item__title">Chọn
-            salon</span></div>
-                            <div className="step-item"><span className="step-item__step">2</span><span className="step-item__title">Chọn
-            dịch vụ</span></div>
-                            <div className="step-item"><span className="step-item__step">3</span><span className="step-item__title">Chọn
-            stylist</span></div>
-                            <div className="step-item"><span className="step-item__step active">4</span><span className="step-item__title">Hoàn tất</span></div>
-                        </div>
-                    </div>
+            <Fragment >
                     <div className="extension">
                         <h2 className="title-big">YÊU CẦU CHỌN TRƯỚC MIỄN PHÍ</h2>
                         <div className="title">Chào anh, mời anh chọn các yêu cầu chọn trước miễn phí của bên em nhé!
@@ -46,9 +34,7 @@ class Finish extends Component {
                         </div>
                     </div>
                    <Information/>
-                    <div />
-                </div>
-            </div>
+            </Fragment>
 
         )
     }
