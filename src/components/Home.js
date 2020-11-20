@@ -3,6 +3,7 @@ import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
 
 class Home extends Component {
+
   constructor(props) {
     super(props);
   }
@@ -17,9 +18,10 @@ class Home extends Component {
         step:0,
       };
       this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
+
     }
   };
-  //  ): <Fragment/>
+
 
   render() {
     return (

@@ -5,8 +5,7 @@ class Information extends Component {
     render() {
         return (
             <div>
-                <div aria-hidden="true" style={{ width: '500px', height: '102.575px' }} />
-                <div className="ant-affix" style={{ position: 'fixed', bottom: '0px', width: '500px', height: '102.575px' }}>
+                <div className="ant-affix" style={{ position: 'sticky', bottom: '0px', width: '500px', height: '102.575px' }}>
                     <div className="affix">
                         <div>
                             <div>

@@ -1,0 +1,1046 @@
+{
+    "salon": {
+        "id": 87,
+        "name": "345 Nguyễn Văn Linh",
+        "address": "345 Nguyễn Văn Linh, P. Thạc Gián, Q. Thanh Khê, TP. Đà Nẵng",
+        "latitude": 16.0591794,
+        "longitude": 108.2079842,
+        "images": "",
+        "phone": "1800.28.28.30"
+    },
+    "changeService": false,
+    "hourGroup": [
+        {
+            "name": "7",
+            "hours": [
+                {
+                    "hourId": 4324,
+                    "subHourId": 43240,
+                    "secondSubHourId": 0,
+                    "hour": "7h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "07:30:00"
+                },
+                {
+                    "hourId": 4324,
+                    "subHourId": 43240,
+                    "secondSubHourId": 432402,
+                    "hour": "7h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "07:40:00"
+                },
+                {
+                    "hourId": 4324,
+                    "subHourId": 43241,
+                    "secondSubHourId": 0,
+                    "hour": "7h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "07:45:00"
+                }
+            ]
+        },
+        {
+            "name": "8",
+            "hours": [
+                {
+                    "hourId": 4320,
+                    "subHourId": 43200,
+                    "secondSubHourId": 0,
+                    "hour": "8h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:00:00"
+                },
+                {
+                    "hourId": 4320,
+                    "subHourId": 43201,
+                    "secondSubHourId": 0,
+                    "hour": "8h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:15:00"
+                },
+                {
+                    "hourId": 4320,
+                    "subHourId": 43201,
+                    "secondSubHourId": 432011,
+                    "hour": "8h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:20:00"
+                },
+                {
+                    "hourId": 4294,
+                    "subHourId": 42940,
+                    "secondSubHourId": 0,
+                    "hour": "8h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:30:00"
+                },
+                {
+                    "hourId": 4294,
+                    "subHourId": 42940,
+                    "secondSubHourId": 429402,
+                    "hour": "8h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:40:00"
+                },
+                {
+                    "hourId": 4294,
+                    "subHourId": 42941,
+                    "secondSubHourId": 0,
+                    "hour": "8h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "08:45:00"
+                }
+            ]
+        },
+        {
+            "name": "9",
+            "hours": [
+                {
+                    "hourId": 4295,
+                    "subHourId": 42950,
+                    "secondSubHourId": 0,
+                    "hour": "9h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:00:00"
+                },
+                {
+                    "hourId": 4295,
+                    "subHourId": 42951,
+                    "secondSubHourId": 0,
+                    "hour": "9h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:15:00"
+                },
+                {
+                    "hourId": 4295,
+                    "subHourId": 42951,
+                    "secondSubHourId": 429511,
+                    "hour": "9h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:20:00"
+                },
+                {
+                    "hourId": 4296,
+                    "subHourId": 42960,
+                    "secondSubHourId": 0,
+                    "hour": "9h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:30:00"
+                },
+                {
+                    "hourId": 4296,
+                    "subHourId": 42960,
+                    "secondSubHourId": 429602,
+                    "hour": "9h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:40:00"
+                },
+                {
+                    "hourId": 4296,
+                    "subHourId": 42961,
+                    "secondSubHourId": 0,
+                    "hour": "9h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "09:45:00"
+                }
+            ]
+        },
+        {
+            "name": "10",
+            "hours": [
+                {
+                    "hourId": 4297,
+                    "subHourId": 42970,
+                    "secondSubHourId": 0,
+                    "hour": "10h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:00:00"
+                },
+                {
+                    "hourId": 4297,
+                    "subHourId": 42971,
+                    "secondSubHourId": 0,
+                    "hour": "10h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:15:00"
+                },
+                {
+                    "hourId": 4297,
+                    "subHourId": 42971,
+                    "secondSubHourId": 429711,
+                    "hour": "10h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:20:00"
+                },
+                {
+                    "hourId": 4298,
+                    "subHourId": 42980,
+                    "secondSubHourId": 0,
+                    "hour": "10h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:30:00"
+                },
+                {
+                    "hourId": 4298,
+                    "subHourId": 42980,
+                    "secondSubHourId": 429802,
+                    "hour": "10h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:40:00"
+                },
+                {
+                    "hourId": 4298,
+                    "subHourId": 42981,
+                    "secondSubHourId": 0,
+                    "hour": "10h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "10:45:00"
+                }
+            ]
+        },
+        {
+            "name": "11",
+            "hours": [
+                {
+                    "hourId": 4299,
+                    "subHourId": 42990,
+                    "secondSubHourId": 0,
+                    "hour": "11h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:00:00"
+                },
+                {
+                    "hourId": 4299,
+                    "subHourId": 42991,
+                    "secondSubHourId": 0,
+                    "hour": "11h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:15:00"
+                },
+                {
+                    "hourId": 4299,
+                    "subHourId": 42991,
+                    "secondSubHourId": 429911,
+                    "hour": "11h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:20:00"
+                },
+                {
+                    "hourId": 4300,
+                    "subHourId": 43000,
+                    "secondSubHourId": 0,
+                    "hour": "11h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:30:00"
+                },
+                {
+                    "hourId": 4300,
+                    "subHourId": 43000,
+                    "secondSubHourId": 430002,
+                    "hour": "11h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:40:00"
+                },
+                {
+                    "hourId": 4300,
+                    "subHourId": 43001,
+                    "secondSubHourId": 0,
+                    "hour": "11h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "11:45:00"
+                }
+            ]
+        },
+        {
+            "name": "12",
+            "hours": [
+                {
+                    "hourId": 4301,
+                    "subHourId": 43010,
+                    "secondSubHourId": 0,
+                    "hour": "12h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:00:00"
+                },
+                {
+                    "hourId": 4301,
+                    "subHourId": 43011,
+                    "secondSubHourId": 0,
+                    "hour": "12h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:15:00"
+                },
+                {
+                    "hourId": 4301,
+                    "subHourId": 43011,
+                    "secondSubHourId": 430111,
+                    "hour": "12h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:20:00"
+                },
+                {
+                    "hourId": 4302,
+                    "subHourId": 43020,
+                    "secondSubHourId": 0,
+                    "hour": "12h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:30:00"
+                },
+                {
+                    "hourId": 4302,
+                    "subHourId": 43020,
+                    "secondSubHourId": 430202,
+                    "hour": "12h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:40:00"
+                },
+                {
+                    "hourId": 4302,
+                    "subHourId": 43021,
+                    "secondSubHourId": 0,
+                    "hour": "12h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "12:45:00"
+                }
+            ]
+        },
+        {
+            "name": "13",
+            "hours": [
+                {
+                    "hourId": 4303,
+                    "subHourId": 43030,
+                    "secondSubHourId": 0,
+                    "hour": "13h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:00:00"
+                },
+                {
+                    "hourId": 4303,
+                    "subHourId": 43031,
+                    "secondSubHourId": 0,
+                    "hour": "13h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:15:00"
+                },
+                {
+                    "hourId": 4303,
+                    "subHourId": 43031,
+                    "secondSubHourId": 430311,
+                    "hour": "13h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:20:00"
+                },
+                {
+                    "hourId": 4304,
+                    "subHourId": 43040,
+                    "secondSubHourId": 0,
+                    "hour": "13h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:30:00"
+                },
+                {
+                    "hourId": 4304,
+                    "subHourId": 43040,
+                    "secondSubHourId": 430402,
+                    "hour": "13h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:40:00"
+                },
+                {
+                    "hourId": 4304,
+                    "subHourId": 43041,
+                    "secondSubHourId": 0,
+                    "hour": "13h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "13:45:00"
+                }
+            ]
+        },
+        {
+            "name": "14",
+            "hours": [
+                {
+                    "hourId": 4305,
+                    "subHourId": 43050,
+                    "secondSubHourId": 0,
+                    "hour": "14h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:00:00"
+                },
+                {
+                    "hourId": 4305,
+                    "subHourId": 43051,
+                    "secondSubHourId": 0,
+                    "hour": "14h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:15:00"
+                },
+                {
+                    "hourId": 4305,
+                    "subHourId": 43051,
+                    "secondSubHourId": 430511,
+                    "hour": "14h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:20:00"
+                },
+                {
+                    "hourId": 4306,
+                    "subHourId": 43060,
+                    "secondSubHourId": 0,
+                    "hour": "14h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:30:00"
+                },
+                {
+                    "hourId": 4306,
+                    "subHourId": 43060,
+                    "secondSubHourId": 430602,
+                    "hour": "14h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:40:00"
+                },
+                {
+                    "hourId": 4306,
+                    "subHourId": 43061,
+                    "secondSubHourId": 0,
+                    "hour": "14h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "14:45:00"
+                }
+            ]
+        },
+        {
+            "name": "15",
+            "hours": [
+                {
+                    "hourId": 4307,
+                    "subHourId": 43070,
+                    "secondSubHourId": 0,
+                    "hour": "15h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:00:00"
+                },
+                {
+                    "hourId": 4307,
+                    "subHourId": 43071,
+                    "secondSubHourId": 0,
+                    "hour": "15h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:15:00"
+                },
+                {
+                    "hourId": 4307,
+                    "subHourId": 43071,
+                    "secondSubHourId": 430711,
+                    "hour": "15h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:20:00"
+                },
+                {
+                    "hourId": 4308,
+                    "subHourId": 43080,
+                    "secondSubHourId": 0,
+                    "hour": "15h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:30:00"
+                },
+                {
+                    "hourId": 4308,
+                    "subHourId": 43080,
+                    "secondSubHourId": 430802,
+                    "hour": "15h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:40:00"
+                },
+                {
+                    "hourId": 4308,
+                    "subHourId": 43081,
+                    "secondSubHourId": 0,
+                    "hour": "15h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "15:45:00"
+                }
+            ]
+        },
+        {
+            "name": "16",
+            "hours": [
+                {
+                    "hourId": 4309,
+                    "subHourId": 43090,
+                    "secondSubHourId": 0,
+                    "hour": "16h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:00:00"
+                },
+                {
+                    "hourId": 4309,
+                    "subHourId": 43091,
+                    "secondSubHourId": 0,
+                    "hour": "16h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:15:00"
+                },
+                {
+                    "hourId": 4309,
+                    "subHourId": 43091,
+                    "secondSubHourId": 430911,
+                    "hour": "16h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:20:00"
+                },
+                {
+                    "hourId": 4310,
+                    "subHourId": 43100,
+                    "secondSubHourId": 0,
+                    "hour": "16h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:30:00"
+                },
+                {
+                    "hourId": 4310,
+                    "subHourId": 43100,
+                    "secondSubHourId": 431002,
+                    "hour": "16h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:40:00"
+                },
+                {
+                    "hourId": 4310,
+                    "subHourId": 43101,
+                    "secondSubHourId": 0,
+                    "hour": "16h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "16:45:00"
+                }
+            ]
+        },
+        {
+            "name": "17",
+            "hours": [
+                {
+                    "hourId": 4311,
+                    "subHourId": 43110,
+                    "secondSubHourId": 0,
+                    "hour": "17h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:00:00"
+                },
+                {
+                    "hourId": 4311,
+                    "subHourId": 43111,
+                    "secondSubHourId": 0,
+                    "hour": "17h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:15:00"
+                },
+                {
+                    "hourId": 4311,
+                    "subHourId": 43111,
+                    "secondSubHourId": 431111,
+                    "hour": "17h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:20:00"
+                },
+                {
+                    "hourId": 4312,
+                    "subHourId": 43120,
+                    "secondSubHourId": 0,
+                    "hour": "17h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:30:00"
+                },
+                {
+                    "hourId": 4312,
+                    "subHourId": 43120,
+                    "secondSubHourId": 431202,
+                    "hour": "17h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:40:00"
+                },
+                {
+                    "hourId": 4312,
+                    "subHourId": 43121,
+                    "secondSubHourId": 0,
+                    "hour": "17h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "17:45:00"
+                }
+            ]
+        },
+        {
+            "name": "18",
+            "hours": [
+                {
+                    "hourId": 4313,
+                    "subHourId": 43130,
+                    "secondSubHourId": 0,
+                    "hour": "18h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:00:00"
+                },
+                {
+                    "hourId": 4313,
+                    "subHourId": 43131,
+                    "secondSubHourId": 0,
+                    "hour": "18h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:15:00"
+                },
+                {
+                    "hourId": 4313,
+                    "subHourId": 43131,
+                    "secondSubHourId": 431311,
+                    "hour": "18h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:20:00"
+                },
+                {
+                    "hourId": 4314,
+                    "subHourId": 43140,
+                    "secondSubHourId": 0,
+                    "hour": "18h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:30:00"
+                },
+                {
+                    "hourId": 4314,
+                    "subHourId": 43140,
+                    "secondSubHourId": 431402,
+                    "hour": "18h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:40:00"
+                },
+                {
+                    "hourId": 4314,
+                    "subHourId": 43141,
+                    "secondSubHourId": 0,
+                    "hour": "18h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "18:45:00"
+                }
+            ]
+        },
+        {
+            "name": "19",
+            "hours": [
+                {
+                    "hourId": 4315,
+                    "subHourId": 43150,
+                    "secondSubHourId": 0,
+                    "hour": "19h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:00:00"
+                },
+                {
+                    "hourId": 4315,
+                    "subHourId": 43151,
+                    "secondSubHourId": 0,
+                    "hour": "19h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:15:00"
+                },
+                {
+                    "hourId": 4315,
+                    "subHourId": 43151,
+                    "secondSubHourId": 431511,
+                    "hour": "19h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:20:00"
+                },
+                {
+                    "hourId": 4316,
+                    "subHourId": 43160,
+                    "secondSubHourId": 0,
+                    "hour": "19h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:30:00"
+                },
+                {
+                    "hourId": 4316,
+                    "subHourId": 43160,
+                    "secondSubHourId": 431602,
+                    "hour": "19h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:40:00"
+                },
+                {
+                    "hourId": 4316,
+                    "subHourId": 43161,
+                    "secondSubHourId": 0,
+                    "hour": "19h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "19:45:00"
+                }
+            ]
+        },
+        {
+            "name": "20",
+            "hours": [
+                {
+                    "hourId": 4317,
+                    "subHourId": 43170,
+                    "secondSubHourId": 0,
+                    "hour": "20h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "20:00:00"
+                },
+                {
+                    "hourId": 4317,
+                    "subHourId": 43171,
+                    "secondSubHourId": 0,
+                    "hour": "20h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "20:15:00"
+                },
+                {
+                    "hourId": 4317,
+                    "subHourId": 43171,
+                    "secondSubHourId": 431711,
+                    "hour": "20h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "20:20:00"
+                },
+                {
+                    "hourId": 4318,
+                    "subHourId": 43180,
+                    "secondSubHourId": 0,
+                    "hour": "20h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "20:30:00"
+                },
+                {
+                    "hourId": 4318,
+                    "subHourId": 43180,
+                    "secondSubHourId": 431802,
+                    "hour": "20h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "20:40:00"
+                },
+                {
+                    "hourId": 4318,
+                    "subHourId": 43181,
+                    "secondSubHourId": 0,
+                    "hour": "20h45",
+                    "isFree": true,
+                    "totalSlot": 2,
+                    "totalBook": 0,
+                    "totalEmpty": 2,
+                    "hourFrame": "20:45:00"
+                }
+            ]
+        },
+        {
+            "name": "21",
+            "hours": [
+                {
+                    "hourId": 4319,
+                    "subHourId": 43190,
+                    "secondSubHourId": 0,
+                    "hour": "21h00",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:00:00"
+                },
+                {
+                    "hourId": 4319,
+                    "subHourId": 43191,
+                    "secondSubHourId": 0,
+                    "hour": "21h15",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:15:00"
+                },
+                {
+                    "hourId": 4319,
+                    "subHourId": 43191,
+                    "secondSubHourId": 431911,
+                    "hour": "21h20",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:20:00"
+                },
+                {
+                    "hourId": 4321,
+                    "subHourId": 43210,
+                    "secondSubHourId": 0,
+                    "hour": "21h30",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:30:00"
+                },
+                {
+                    "hourId": 4321,
+                    "subHourId": 43210,
+                    "secondSubHourId": 432102,
+                    "hour": "21h40",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:40:00"
+                },
+                {
+                    "hourId": 4321,
+                    "subHourId": 43211,
+                    "secondSubHourId": 0,
+                    "hour": "21h45",
+                    "isFree": false,
+                    "totalSlot": 0,
+                    "totalBook": 0,
+                    "totalEmpty": 0,
+                    "hourFrame": "21:45:00"
+                }
+            ]
+        }
+    ]
+}

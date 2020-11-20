@@ -1,0 +1,47 @@
+[
+    {
+        "id": 333,
+        "name": "Da anh dễ bị kích ứng",
+        "image": "string"
+    },
+    {
+        "id": 334,
+        "name": "Rửa tai bằng bọt sảng khoái",
+        "image": "string"
+    },
+    {
+        "id": 335,
+        "name": "Không gội mạnh bằng móng tay",
+        "image": "string"
+    },
+    {
+        "id": 131,
+        "name": "Cắt - giũa móng tay",
+        "image": "string"
+    },
+    {
+        "id": 336,
+        "name": "Cạo mặt + lông mày & Tỉa lông mũi",
+        "image": "string"
+    },
+    {
+        "id": 337,
+        "name": "Tư vấn kiểu tóc mới",
+        "image": "string"
+    },
+    {
+        "id": 338,
+        "name": "Hỏi kĩ trước và trong khi cắt",
+        "image": "string"
+    },
+    {
+        "id": 339,
+        "name": "Cắt che phủ (sẹo, mụn thịt, đầu bẹt)",
+        "image": "string"
+    },
+    {
+        "id": 340,
+        "name": "Hướng dẫn tự vuốt sáp tại nhà",
+        "image": "string"
+    }
+]
