@@ -1,3 +1,4 @@
+
 import React, { Component, Fragment } from 'react';
 
 import Slider from "react-slick";
@@ -5,7 +6,7 @@ import { Link, NavLink, Redirect } from 'react-router-dom';
 
 import { notification } from 'antd';
 import 'antd/dist/antd.css';
-
+import qs from "query-string";
 
 
 
@@ -540,24 +541,16 @@ class FindSalon extends Component {
     }
 
     render() {
+      
+      const { arraySalon, search, show, arrayTopSL, allSalon, idSalonSearch, districtId } = this.state;
 
 
-        const { arraySalon, search, show, arrayTopSL, allSalon, idSalonSearch, districtId } = this.state;
+
+        
 
         return (
-            <div className="booking">
-                <div className="body">
-                    <div className="step">
-                        <div id="step-list">
-                            <div className="step-item"><span className="step-item__step active">1</span><span className="step-item__title">Chọn salon</span></div>
-                            <div className="step-item"><span className="step-item__step">2</span><span className="step-item__title">Chọn
-            dịch vụ</span></div>
-                            <div className="step-item"><span className="step-item__step">3</span><span className="step-item__title">Chọn
-            stylist</span></div>
-                            <div className="step-item"><span className="step-item__step">4</span><span className="step-item__title">Hoàn
-            tất</span></div>
-                        </div>
-                    </div>
+
+            
                     <div className="box-salon bg-white">
                         <div className="select-salon">
                             <div className="content shadown br-2">
@@ -598,9 +591,7 @@ class FindSalon extends Component {
 
                         <div className />
                     </div>
-                    <div />
-                </div>
-            </div>
+               
 
         )
     }

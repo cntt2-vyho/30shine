@@ -11,6 +11,7 @@ import Done from './components/Done';
 import Footer from './components/Footer';
 import PhoneError from './components/error/PhoneError';
 import Slider from './components/Slider';
+import Step from './components/Step';
 
 export default class App extends Component {
     render() {
@@ -22,10 +23,12 @@ export default class App extends Component {
 
                         <Route path="/" component={PhoneError} />
 
-                        <Route exact path="/" component={Slider} />
+                        <Route exact  path="/" history={this.props.history} component={Slider} />
                         {/* <Route exact path="/" component={Home} /> */}
-                        <Route exact path="/booking=phone/:phone" component={FindSalon} />
-                        <Route exact path="/booking/phone=/:phone/salonId=/:salonId" component={Services} />
+
+                        <Route  path="/booking" history={this.props.history} component={Step} />
+                        <Route exact path="/services" component={Services} />
+
                         {/* <Route  path="/servives" component={Information} /> */}
 
                         <Route exact path="/choose-stylelist-and-options" component={StyleListAndOptions} />
