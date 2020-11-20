@@ -1,187 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://30shine.com/fav.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
+
     <link rel="stylesheet" href="%PUBLIC_URL%/css/4.ca1e5c96.chunk.css" />
     <link rel="stylesheet" href="%PUBLIC_URL%/css/main.eec3616a.chunk.css" />
     <link rel="stylesheet" href="%PUBLIC_URL%/css/5.acb543a4.chunk.css" />
     <link rel="stylesheet" href="%PUBLIC_URL%/css/10.bb00cad5.chunk.css" />
-
-
-    <!-- <script defer="defer" src="https://www.googletagmanager.com/gtag/js?id=UA-68836951-1"
-        type="44d156bfb5608d8ab52f0997-text/javascript"></script>
-
-
-
-        <script type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion_async.js"></script>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=AW-824742321&amp;l=dataLayer&amp;cx=c"></script>
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-Q4C3P16696&amp;l=dataLayer&amp;cx=c"></script>
-    <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
-    <script defer="defer" src="https://www.googletagmanager.com/gtag/js?id=UA-68836951-1"
-        type="text/javascript"></script>
-    <script defer="defer"
-        type="text/javascript">function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-68836951-1"), gtag("config", "AW-824742321")</script>
-    <script defer="defer"
-        type="text/javascript">!function (e, t, n, c, a, o, f) { e.fbq || (a = e.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, e._fbq || (e._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], (o = t.createElement(n)).async = !0, o.src = "https://connect.facebook.net/en_US/fbevents.js", (f = t.getElementsByTagName(n)[0]).parentNode.insertBefore(o, f)) }(window, document, "script"), fbq("init", "287799401711918"), fbq("track", "PageView"), fbq("track", "Purchase", { value: 1e5, currency: "VND" })</script>
-    <script
-        type="text/javascript">!function (e, t, a, n, c, m, r) { e.ym = e.ym || function () { (e.ym.a = e.ym.a || []).push(arguments) }, e.ym.l = 1 * new Date, m = t.createElement(a), r = t.getElementsByTagName(a)[0], m.async = 1, m.src = "https://mc.yandex.ru/metrika/tag.js", r.parentNode.insertBefore(m, r) }(window, document, "script"), ym(57451708, "init", { clickmap: !0, trackLinks: !0, accurateTrackBounce: !0, webvisor: !0 })</script>
-
-        <script src="%PUBLIC_URL%/js/4.a84f5160.chunk.js" type="text/javascript"></script>
-        <script src="%PUBLIC_URL%/js/main.58043e90.chunk.js" type="text/javascript"></script> -->
     <title>Đặt Lịch Cắt Tóc - Chuỗi Cắt Tóc Nam 30Shine</title>
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  charset="UTF-8"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-/>
+    <style>
+        .ant-notification-notice.ant-notification-notice-closable {
+            background-color: #f3afb3;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
     <style type="text/css">
-    .slick-next:before, [dir=rtl] .slick-prev:before {
-    content: '→';
-    color: #000;
-}
-.slick-prev:before {
-    content: '←';
-    color: #000;
-}
-.slick-disabled {
-    display: none !important;
-}
-      .anticon {
-          display: inline-block;
-          color: inherit;
-          font-style: normal;
-          line-height: 0;
-          text-align: center;
-          text-transform: none;
-          vertical-align: -0.125em;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-      }
+        .slick-slide:hover {
+            cursor: pointer;
+        }
 
-      .anticon>* {
-          line-height: 1;
-      }
+        .slick-next:before,
+        [dir=rtl] .slick-prev:before {
+            content: '→';
+            color: #000;
+        }
 
-      .anticon svg {
-          display: inline-block;
-      }
+        .slick-prev:before {
+            content: '←';
+            color: #000;
+        }
 
-      .anticon::before {
-          display: none;
-      }
+        .slick-disabled {
+            display: none !important;
+        }
 
-      .anticon .anticon-icon {
-          display: block;
-      }
+        .anticon {
+            display: inline-block;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-      .anticon[tabindex] {
-          cursor: pointer;
-      }
+        .anticon>* {
+            line-height: 1;
+        }
 
-      .anticon-spin::before,
-      .anticon-spin {
-          display: inline-block;
-          -webkit-animation: loadingCircle 1s infinite linear;
-          animation: loadingCircle 1s infinite linear;
-      }
+        .anticon svg {
+            display: inline-block;
+        }
 
-      @-webkit-keyframes loadingCircle {
-          100% {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
+        .anticon::before {
+            display: none;
+        }
 
-      @keyframes loadingCircle {
-          100% {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
+        .anticon .anticon-icon {
+            display: block;
+        }
 
-      .anticon {
-          display: inline-block;
-          color: inherit;
-          font-style: normal;
-          line-height: 0;
-          text-align: center;
-          text-transform: none;
-          vertical-align: -0.125em;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-      }
+        .anticon[tabindex] {
+            cursor: pointer;
+        }
 
-      .anticon>* {
-          line-height: 1;
-      }
+        .anticon-spin::before,
+        .anticon-spin {
+            display: inline-block;
+            -webkit-animation: loadingCircle 1s infinite linear;
+            animation: loadingCircle 1s infinite linear;
+        }
 
-      .anticon svg {
-          display: inline-block;
-      }
+        @-webkit-keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
 
-      .anticon::before {
-          display: none;
-      }
+        @keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
 
-      .anticon .anticon-icon {
-          display: block;
-      }
+        .anticon {
+            display: inline-block;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-      .anticon[tabindex] {
-          cursor: pointer;
-      }
+        .anticon>* {
+            line-height: 1;
+        }
 
-      .anticon-spin::before,
-      .anticon-spin {
-          display: inline-block;
-          -webkit-animation: loadingCircle 1s infinite linear;
-          animation: loadingCircle 1s infinite linear;
-      }
+        .anticon svg {
+            display: inline-block;
+        }
 
-      @-webkit-keyframes loadingCircle {
-          100% {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
+        .anticon::before {
+            display: none;
+        }
 
-      @keyframes loadingCircle {
-          100% {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
-  </style>
-  </head>
-  <body>
+        .anticon .anticon-icon {
+            display: block;
+        }
+
+        .anticon[tabindex] {
+            cursor: pointer;
+        }
+
+        .anticon-spin::before,
+        .anticon-spin {
+            display: inline-block;
+            -webkit-animation: loadingCircle 1s infinite linear;
+            animation: loadingCircle 1s infinite linear;
+        }
+
+        @-webkit-keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -194,15 +171,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
 
-  <!-- <script src="/static/js/4.a84f5160.chunk.js" type="44d156bfb5608d8ab52f0997-text/javascript"></script>
-<script src="/static/js/main.58043e90.chunk.js" type="44d156bfb5608d8ab52f0997-text/javascript"></script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="44d156bfb5608d8ab52f0997-|49" defer=""></script>
-<script>
-   !function(e){function t(t){for(var a,n,d=t[0],o=t[1],b=t[2],u=0,l=[];u<d.length;u++)n=d[u],Object.prototype.hasOwnProperty.call(c,n)&&c[n]&&l.push(c[n][0]),c[n]=0;for(a in o)Object.prototype.hasOwnProperty.call(o,a)&&(e[a]=o[a]);for(i&&i(t);l.length;)l.shift()();return f.push.apply(f,b||[]),r()}function r(){for(var e,t=0;t<f.length;t++){for(var r=f[t],a=!0,n=1;n<r.length;n++){var o=r[n];0!==c[o]&&(a=!1)}a&&(f.splice(t--,1),e=d(d.s=r[0]))}return e}var a={},n={3:0},c={3:0},f=[];function d(t){if(a[t])return a[t].exports;var r=a[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,d),r.l=!0,r.exports}d.e=function(e){var t=[];n[e]?t.push(n[e]):0!==n[e]&&{0:1,5:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1,34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,46:1,47:1,48:1,49:1,50:1,51:1,52:1,53:1,54:1,55:1,56:1}[e]&&t.push(n[e]=new Promise((function(t,r){for(var a="static/css/"+({}[e]||e)+"."+{0:"927d9baa",1:"31d6cfe0",5:"acb543a4",6:"31d6cfe0",7:"2f89884f",8:"7c8d5070",9:"4ef0fd02",10:"bb00cad5",11:"f1fbb62a",12:"b55a2091",13:"608f7163",14:"d9f73e69",15:"6e80090f",16:"285db5c6",17:"cebe7999",18:"285db5c6",19:"d8135dba",20:"c20cc7b2",21:"f3a5c737",22:"d2bcfc0b",23:"72ee3876",24:"0b4103a9",25:"b483a5b2",26:"a8bb8e57",27:"e1f7b2d5",28:"43bd7421",29:"6d67050e",30:"7450273c",31:"02e3f3aa",32:"285db5c6",33:"326fa450",34:"285db5c6",35:"cb62c7f7",36:"06227944",37:"285db5c6",38:"285db5c6",39:"96518e95",40:"285db5c6",41:"96518e95",42:"6a9abaaa",43:"285db5c6",44:"285db5c6",45:"285db5c6",46:"285db5c6",47:"285db5c6",48:"96518e95",49:"fba917e3",50:"285db5c6",51:"a939285e",52:"0ba2ce29",53:"cea32c00",54:"76c4cfe4",55:"4252b748",56:"9279ad14",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0"}[e]+".chunk.css",c=d.p+a,f=document.getElementsByTagName("link"),o=0;o<f.length;o++){var b=(i=f[o]).getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(b===a||b===c))return t()}var u=document.getElementsByTagName("style");for(o=0;o<u.length;o++){var i;if((b=(i=u[o]).getAttribute("data-href"))===a||b===c)return t()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=t,l.onerror=function(t){var a=t&&t.target&&t.target.src||c,f=new Error("Loading CSS chunk "+e+" failed.\n("+a+")");f.code="CSS_CHUNK_LOAD_FAILED",f.request=a,delete n[e],l.parentNode.removeChild(l),r(f)},l.href=c,document.getElementsByTagName("head")[0].appendChild(l)})).then((function(){n[e]=0})));var r=c[e];if(0!==r)if(r)t.push(r[2]);else{var a=new Promise((function(t,a){r=c[e]=[t,a]}));t.push(r[2]=a);var f,o=document.createElement("script");o.charset="utf-8",o.timeout=120,d.nc&&o.setAttribute("nonce",d.nc),o.src=function(e){return d.p+"static/js/"+({}[e]||e)+"."+{0:"e9ab9555",1:"2657e407",5:"511989ab",6:"6ec0d80a",7:"825c39f7",8:"ac9549eb",9:"09a9683f",10:"21d9b958",11:"e7c0e55a",12:"d15105bf",13:"38126975",14:"9b737fd2",15:"6dd13338",16:"d1d2bd09",17:"461f854d",18:"0d233431",19:"b6750b9d",20:"d3db36d7",21:"1ff12279",22:"5fac2f70",23:"346f6f6c",24:"7871807e",25:"405d17eb",26:"58e4e709",27:"54e6c2ee",28:"572473a2",29:"ba8a8821",30:"bf0c4a97",31:"4fc9a11f",32:"5a1c2426",33:"549af9b6",34:"6b36d27c",35:"ab9234ad",36:"abbded25",37:"813aa3ee",38:"75f6f037",39:"3fa6f547",40:"18866559",41:"65081571",42:"585d5f7d",43:"1c970fee",44:"d6bae73a",45:"fb8e46a5",46:"87425596",47:"add9a522",48:"2e3328f7",49:"b6183392",50:"cfd66f56",51:"da13a3c2",52:"8005146d",53:"84fa25ce",54:"c54cc59d",55:"7ce4b144",56:"b0c7b11a",57:"fb5badbd",58:"ec6fe218",59:"f6b7c274",60:"1ff0a429",61:"d44045d7"}[e]+".chunk.js"}(e);var b=new Error;f=function(t){o.onerror=o.onload=null,clearTimeout(u);var r=c[e];if(0!==r){if(r){var a=t&&("load"===t.type?"missing":t.type),n=t&&t.target&&t.target.src;b.message="Loading chunk "+e+" failed.\n("+a+": "+n+")",b.name="ChunkLoadError",b.type=a,b.request=n,r[1](b)}c[e]=void 0}};var u=setTimeout((function(){f({type:"timeout",target:o})}),12e4);o.onerror=o.onload=f,document.head.appendChild(o)}return Promise.all(t)},d.m=e,d.c=a,d.d=function(e,t,r){d.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},d.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},d.t=function(e,t){if(1&t&&(e=d(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(d.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)d.d(r,a,function(t){return e[t]}.bind(null,a));return r},d.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return d.d(t,"a",t),t},d.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},d.p="/",d.oe=function(e){throw console.error(e),e};var o=this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[],b=o.push.bind(o);o.push=t,o=o.slice();for(var u=0;u<o.length;u++)t(o[u]);var i=b;r()}([])
-</script>
-<script src="%PUBLIC_URL%/js/4.a84f5160.chunk.js" type="text/javascript"></script>
-<script src="%PUBLIC_URL%/js/main.58043e90.chunk.js" type="text/javascript"></script> -->
 </html>

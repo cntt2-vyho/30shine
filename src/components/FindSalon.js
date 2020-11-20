@@ -3,7 +3,11 @@ import React, { Component, Fragment } from 'react';
 import Slider from "react-slick";
 import { Link, NavLink, Redirect } from 'react-router-dom';
 
-import { Alert } from 'antd';
+import { notification } from 'antd';
+import 'antd/dist/antd.css';
+
+
+
 
 class FindSalon extends Component {
 
@@ -18,7 +22,9 @@ class FindSalon extends Component {
             idSalonSearch: '',
             addClass: false,
             showListDistrict: false,
-            districtId: ''
+            districtId: '',
+            districtName: '',
+
         }
     }
 
@@ -139,94 +145,39 @@ class FindSalon extends Component {
             [event.target.name]: event.target.value
         });
         this.setState({
-            show: true
+            show: true,
+            showListDistrict: false,
+            districtId: '',
+            districtName: '',
         })
 
-        console.log(event.target.name, " : ", event.target.value);
+        // console.log(event.target.name, " : ", event.target.value);
     }
 
+    openNotificationWithIcon = (type) => {
+        notification[type]({
+            message: 'Thông báo',
+            description: 'Hiện tại không có salon nào ở đây',
+        });
+    };
+    //f3afb3
 
 
     show = (value) => {
+        this.setState({
+            show: false
 
-        // console.log(value);
+        })
+        this.setState({ search: value.cityName });
+        this.setState({ idSalonSearch: value.cityId })
 
-        // console.log(value);
-
-        if (value.totalSalon == 0) {
-            //console.log('no here');
-
-            <Alert
-                message="Thông báo"
-                description="Hiện tại không có salon nào ở đây"
-                type="error"
-                showIcon
-            />
-            // <div>
-            //     <div className="ant-notification-notice error ant-notification-notice-closable">
-            //         <div className="ant-notification-notice-content">
-            //             <div className="ant-notification-notice-with-icon" role="alert"><span role="img" aria-label="close-circle"
-            //                 className="anticon anticon-close-circle ant-notification-notice-icon ant-notification-notice-icon-error">
-            //                 <svg viewBox="64 64 896 896" focusable="false" className data-icon="close-circle" width="1em"
-            //                     height="1em" fill="currentColor" aria-hidden="true">
-            //                     <path
-            //                         d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 00-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4 66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z">
-            //                     </path>
-            //                     <path
-            //                         d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448 448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
-            //                     </path>
-            //                 </svg>
-            //             </span>
-            //                 <div className="ant-notification-notice-message">Thông báo</div>
-            //                 <div className="ant-notification-notice-description">Hiện tại không có salon nào ở đây</div>
-            //             </div>
-            //         </div>
-            //         <a tabIndex={0} className="ant-notification-notice-close">
-            //             <span className="ant-notification-close-x">
-            //                 <span role="img" aria-label="close" className="anticon anticon-close ant-notification-close-icon">
-            //                     <svg viewBox="64 64 896 896" focusable="false" className data-icon="close" width="1em" height="1em"
-            //                         fill="currentColor" aria-hidden="true">
-            //                         <path
-            //                             d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z">
-            //                         </path>
-            //                     </svg>
-            //                 </span>
-            //             </span>
-            //         </a>
-            //     </div>
-            // </div>
-
-        }
-        else {
-            this.setState({
-                show: false
-
-            })
-            this.setState({ search: value.cityName });
-            this.setState({ idSalonSearch: value.cityId })
-        }
 
     }
 
     redirect = (id) => {
         console.log(id);
 
-        let salonID = 0, step = 0;
-
-        // <Redirect to="/booking"
-        // // ,search:"?phone=" +event.target.value,search:"&salonId="+salonID+"&step="+step,phone:event.target.value
-        // />;
-
-
-        <Redirect
-            to={{
-                pathname: "/login",
-                search: "?utm=your+face",
-                state: { referrer: id }
-            }}
-        />
-
-
+        alert(id)
     }
 
     showListSalonSearch = (array, id, string) => {
@@ -257,12 +208,19 @@ class FindSalon extends Component {
         })
         return result;
     }
-    showCMM = (array, id) => {
+    showTheoParking = (array, id, string) => {
         let result = [];
+
+        if (this.state.districtId) {
+            array.filter(value => value.districtId == this.state.districtId);
+
+        }
+        // console.log(array);
+        // console.log(this.state.districtId);
         if (this.state.addClass == true) {
 
             result = array.map((value, key) => {
-                if (value.cityId == id && value.parking) {
+                if (value[string] == id && value.parking) {
                     // console.log(this.state.addClass == true);
 
                     return (
@@ -289,7 +247,7 @@ class FindSalon extends Component {
         }
         else {
 
-            result = this.showListSalonSearch(array, id, "cityId");
+            result = this.showListSalonSearch(array, id, string);
 
 
         }
@@ -300,10 +258,9 @@ class FindSalon extends Component {
     toggle() {
         this.setState({ addClass: !this.state.addClass });
     }
-    //ant-checkbox ant-checkbox-checked
+
     showSalonSearch = (array, id) => {
-        // console.log(id);
-        const { arraySalon, showListDistrict, allSalon, districtId } = this.state;
+        const { arraySalon, showListDistrict, allSalon, districtId, districtName } = this.state;
 
 
 
@@ -315,30 +272,38 @@ class FindSalon extends Component {
         let result = <div>
             <div className="filter-distric  padding-10 flex">
                 <span className="h2" style={{ marginRight: '10px' }}> Hiển thị Salon ở</span>
-                <div className="relative box-district">
-                    <span className="h2 underline title" onClick={() => this.setState({ showListDistrict: !this.state.showListDistrict })}> Tất cả quận</span>
-                    <span role="img" aria-label="down" className="anticon anticon-down h3" style={{ marginLeft: '5px' }}>
+                <div className="relative box-district" onClick={() => this.setState({ showListDistrict: !this.state.showListDistrict, })}>
+                    <span className="h2 underline title">{districtName == "" ? ' Tất cả quận' : districtName}</span>
+                    {this.state.showListDistrict ? <span role="img" aria-label="down" className="anticon anticon-down h3" style={{ marginLeft: '5px' }}>
                         <svg viewBox="64 64 896 896" focusable="false" className data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
                             <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
                             </path>
                         </svg>
-                    </span>
+                    </span> : <span role="img" aria-label="up" className="anticon anticon-up h3" style={{ marginLeft: '5px' }}>
+                            <svg viewBox="64 64 896 896" focusable="false" className data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                <path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                </path>
+                            </svg>
+                        </span>
+                    }
                     {showListDistrict && this.showListDistrict(arraySalon, id)}
 
 
                 </div>
             </div>
             <div style={{ paddingLeft: '10px' }}>
-                <div style={{ margin: '10px 0px' }}><label className="ant-checkbox-wrapper" style={{ color: 'rgb(0, 0, 0)', fontSize: '16px' }}>
-                    <span className={boxClass.join(' ')} onClick={this.toggle.bind(this)}>
-                        <input type="checkbox" className="ant-checkbox-input" defaultValue />
-                        <span className="ant-checkbox-inner" />
-                    </span>
-                    <span>Có chỗ đậu ô tô (Có thể mất phí)</span>
-                </label>
+                <div style={{ margin: '10px 0px' }}>
+                    <label className="ant-checkbox-wrapper" style={{ color: 'rgb(0, 0, 0)', fontSize: '16px' }}>
+                        <span className={boxClass.join(' ')} onClick={this.toggle.bind(this)}>
+                            <input type="checkbox" className="ant-checkbox-input" defaultValue />
+                            <span className="ant-checkbox-inner" />
+                        </span>
+                        <span>Có chỗ đậu ô tô (Có thể mất phí)</span>
+                    </label>
                 </div>
             </div>
-            {districtId == '' ? this.showCMM(array, id) : this.showSalonTheoDistrict(allSalon, districtId)}
+            {districtId == '' ? this.showTheoParking(array, id, "cityId") : this.showTheoParking(allSalon, districtId, "districtId")}
+            {/* {districtId !== '' && } */}
         </div>
 
 
@@ -349,39 +314,47 @@ class FindSalon extends Component {
     }
 
     showSalonTheoDistrict = (array, id) => {
-        console.log(array);
-        console.log(id);
+        // console.log(array);
+        // console.log(id);
 
-        this.setState({ districtId: id })
+        // // this.setState({ districtId: id })
 
-        // console.log(this.state.districtId);
+        // // console.log(this.state.districtId);
 
-        let res = this.showListSalonSearch(array, id, "districtId");
-        return res;
+        // let res = this.showListSalonSearch(array, id, "districtId");
+        // return res;
+
+        // console.log(array, id);
+        // this.setState({
+        //    
+        // })
+        // this.setState({
+        //     showListDistrict: false, 
+        // })
+
+        let result = this.showListSalonSearch(array, id, "districtId");
+
+        return result;
 
     }
 
     showListDistrict = (array, id) => {
-        const { allSalon } = this.state;
-
-        // console.log(id);
         let city = {};
 
-        // console.log(array);
 
         array.map((value, key) => {
             if (id == value.cityId) {
-                // console.log(value);
                 city = value;
 
 
             }
         })
         let res = [];
+        console.log(city);
 
         res = city.districtModels.map((e, k) => {
             return (
-                <div className="item-district flex space-between h3" key={k} onClick={() => this.showSalonTheoDistrict(allSalon, e.districtId)}>
+                <div className="item-district flex space-between h3" key={k} onClick={() => this.setState({ districtId: e.districtId, showListDistrict: false, districtName: e.districtName })}>
                     <div>{e.districtName}</div>
                     <div><span className="ant-tag">{e.totalSalon} Cơ sở</span></div>
                 </div>
@@ -391,7 +364,7 @@ class FindSalon extends Component {
 
         return <div className="block dropdown-dsitrict br-2">
 
-            <div className="item-district flex space-between h3" onClick={() => this.setState({ districtId: '' })}>Tất cả quận
+            <div className="item-district flex space-between h3" onClick={() => this.setState({ districtId: '', showListDistrict: false })}>Tất cả quận
             <div>
                     <span className="ant-tag ant-tag-has-color" style={{ backgroundColor: 'rgb(253, 216, 0)', color: 'rgb(17, 17, 17)' }}>{city.totalSalon} Cơ sở</span>
 
@@ -415,7 +388,7 @@ class FindSalon extends Component {
                 if (values.id === id) {
                     // console.log(values);
                     result.push(
-                        <NavLink to={`/booking/phone=/${this.props.match.params.phone}/salonId=/${values.id}`} className="swiper-slide swiper-slide-active" style={{ cursor: 'pointer', width: '194.167px', marginRight: '10px' }} >
+                        <div className="swiper-slide swiper-slide-active" style={{ cursor: 'pointer', width: '194.167px', marginRight: '10px' }} onClick={() => this.redirect(id)}>
                             <div className="padding-5 relative">
                                 <div className="placehoder" style={{ height: 'inherit' }}>
                                     <img className="block w-full" src={values.images} alt="" /></div>
@@ -423,8 +396,8 @@ class FindSalon extends Component {
                                     <img src="https://30shine.com/static/media/parking.44ab7007.svg" alt="" />
                                 </div>}
                             </div>
-                            <div className="padding-5" style={{ color: '#000' }}>{values.addressNew}</div>
-                        </NavLink>
+                            <div className="padding-5">{values.addressNew}</div>
+                        </div>
                     )
                 }
 
@@ -501,7 +474,10 @@ class FindSalon extends Component {
         const item = result1.map((value, key) => {
             if (value.totalSalon == 0) {
                 return (
-                    <div className="item padding-10 flex space-between h2 " key={key} onClick={() => this.show(value)}>
+                    <div className="item padding-10 flex space-between h2 " key={key}
+                        // onClick={() => this.show(value)}
+                        onClick={() => this.openNotificationWithIcon('error')}
+                    >
                         <div>{value.cityName}</div>
                         <div><span className="ant-tag ant-tag-has-color" style={{ backgroundColor: 'rgb(229, 77, 62)' }}>Chưa có cơ sở</span></div>
                     </div>
@@ -564,13 +540,9 @@ class FindSalon extends Component {
     }
 
     render() {
-        // console.log(this.state.districtId);
 
 
-        const { arraySalon, search, show, arrayTopSL, allSalon, idSalonSearch } = this.state;
-
-
-        // console.log(arraySalon);
+        const { arraySalon, search, show, arrayTopSL, allSalon, idSalonSearch, districtId } = this.state;
 
         return (
             <div className="booking">
@@ -614,12 +586,16 @@ class FindSalon extends Component {
 
                             {idSalonSearch == '' ? this.showTopSaLon() : this.showSalonSearch(allSalon, idSalonSearch)}
                         </div>
-                        <div style={{ position: 'relative' }}>
-                            <div aria-hidden="true" style={{ width: '500px', height: '38px' }} />
-                            <div className="ant-affix" style={{ position: 'absolute', bottom: '19px', width: '500px', height: '38px' }}>
-                                <div className="br-2 text-center btn h2 padding-5 mg-10 bg-30s">TÌM SALON GẦN ANH</div>
-                            </div>
+
+
+
+                        {/* <div aria-hidden="true" style={{ width: '500px', height: '38px' }} /> */}
+                        {/* mất */}
+                        <div className="ant-affix" style={{ position: 'sticky', bottom: '19px', width: '500px', height: '38px' }}>
+                            <div className="br-2 text-center btn h2 padding-5 mg-10 bg-30s">TÌM SALON GẦN ANH</div>
                         </div>
+
+
                         <div className />
                     </div>
                     <div />
@@ -630,10 +606,3 @@ class FindSalon extends Component {
     }
 }
 export default FindSalon;
-
-
-{/* <span role="img" aria-label="up" tabindex="-1" class="anticon anticon-up center-middle h3" style="right: 10px; left: inherit;">
-    <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-        <path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path>
-    </svg>
-</span> */}
