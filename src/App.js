@@ -21,7 +21,7 @@ export default class App extends Component {
                     <div className="content">
                         <Route path="/" component={Header} />
 
-                        <Route path="/" component={PhoneError} />
+                        {/* <Route path="/" component={PhoneError} /> */}
 
                         <Route exact  path="/" history={this.props.history} component={Slider} />
                         {/* <Route exact path="/" component={Home} /> */}

@@ -26,6 +26,8 @@ class FindSalon extends Component {
             districtId: '',
             districtName: '',
 
+
+
         }
     }
 
@@ -70,6 +72,9 @@ class FindSalon extends Component {
 
     componentDidMount() {
         // console.log(this.props.match.params.phone, '11');
+
+        console.log(qs.parse(this.props.location.search).phone);
+        // console.log(this.props.location.search);
 
         let ahihi = [];
         this.getDataAsync(`https://storage.30shine.com/web/v3/configs/district.json`).then(data => {
@@ -178,7 +183,15 @@ class FindSalon extends Component {
     redirect = (id) => {
         console.log(id);
 
-        alert(id)
+        // alert(id);
+
+        const newQueryParam = {
+            // ...queryParam,
+            phone: qs.parse(this.props.location.search).phone,
+            salonId: id,
+            step: 1,
+        };
+        this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
     }
 
     showListSalonSearch = (array, id, string) => {
