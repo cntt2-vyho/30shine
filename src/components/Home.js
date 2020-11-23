@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
 
@@ -6,19 +6,29 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
+    this.state={
+      phone : ''
+    }
+  }
+  redirectBooking  = () => {
+    const newQueryParam = {
+      phone: this.state.phone,
+      salonId:0,
+      step:0,
+    };
+    this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
+
   }
   phoneBook = (event) => {
-    // const queryParam = qs.parse(location.search);
-   if( event.key == "Enter")
+    // console.log(event);
+   if( event.type=='keypress' && event.key == "Enter")
      { 
-    const newQueryParam = {
-        // ...queryParam,
-        phone: event.target.value,
-        salonId:0,
-        step:0,
-      };
-      this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
-
+      this.redirectBooking();
+    }
+    else if(event.type=='change'){
+      this.setState({
+        [event.target.name]: event.target.value
+      });
     }
   };
 
@@ -43,15 +53,17 @@ class Home extends Component {
               placeholder="* Nhập số điện thoại (vd: 0987xxxxxx)"
               type="tel"
               className="my-input"
+              name="phone"
+              onChange={(event)=> this.phoneBook(event)}
               onKeyPress={(event) => this.phoneBook(event)}
             />
           </div>
           <div
             style={{ display: "flex", textAlign: "center", marginTop: "10px" }}
           >
-            <NavLink className="btn-booking" to="/findSalon">
+            <NavLink className="btn-booking" to="/booking">
               <div>
-                <span className="booking-text">
+                <span className="booking-text" >
                   ĐẶT LỊCH GIỮ CHỖ &nbsp;
                   <img
                     src="https://storage.30shine.com/ResourceWeb/data/images/click1.png"

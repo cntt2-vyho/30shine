@@ -9,12 +9,19 @@ class Step extends Component {
   constructor(props) {
     super(props);
     this.state={
-      step:parseInt(qs.parse(this.props.location.search).step)
+      step:parseInt(qs.parse(this.props.location.search).step),
+      phone : qs.parse(this.props.location.search).phone,
+      salonId: qs.parse(this.props.location.search).salonId!=0?qs.parse(this.props.location.search).salonId:104
     }
   }
-  
+  componentWillReceiveProps (nextProps){
+    this.setState({
+      step:parseInt(qs.parse(nextProps.location.search).step)
+    })
+  }
+
   showStep = () => {
-    let result = <FindSalon />;
+    let result = <FindSalon/>;
     switch (this.state.step) {
       case 0:
         result = <FindSalon />;
@@ -23,7 +30,7 @@ class Step extends Component {
         result = <Services />;
         break;
       case 2:
-        result = <StyleListAndOptions />;
+        result = <StyleListAndOptions phone= {this.state.phone} salonId={this.state.salonId}/>;
         break;
       case 3:
         result = <Finish />;
@@ -35,7 +42,6 @@ class Step extends Component {
     return result;
   };
   render() {
-    console.log(this.state.step=='0');
     return (
       <div className="booking">
         <div className="body">
