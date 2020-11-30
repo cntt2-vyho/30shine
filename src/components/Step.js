@@ -40,7 +40,7 @@ class Step extends Component {
         return result;
     };
     render() {
-        console.log(this.state.step);
+        // console.log(this.state.step);
         return (
             <div className="booking">
                 <div className="body">

@@ -25,14 +25,8 @@ class FindSalon extends Component {
             showListDistrict: false,
             districtId: '',
             districtName: '',
-
-
-
         }
     }
-
-
-
 
     chuyenDoiURL = (str) => {
         str = str.toLowerCase();
