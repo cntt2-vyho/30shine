@@ -10,10 +10,12 @@
     "query-string": "^6.13.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-slick": "^0.27.13",
+    "redux": "^4.0.5",
     "swiper": "^6.3.5",
     "web-vitals": "^0.2.4"
   },

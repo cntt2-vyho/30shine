@@ -25,13 +25,13 @@ class Step extends Component {
                 result = <FindSalon location={this.props.location} history={this.props.history} />;
                 break;
             case 1:
-                result = <Services />;
+                result = <Services  location={this.props.location} history={this.props.history}/>;
                 break;
             case 2:
                 result = <StyleListAndOptions />;
                 break;
             case 3:
-                result = <Finish />;
+                result = <Finish  location={this.props.location} history={this.props.history} />;
                 break;
             default:
                 this.setState({ step: 0 });
