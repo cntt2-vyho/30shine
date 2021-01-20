@@ -1,7 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import Information from './Information';
-// import { getDataAsync } from './utils/notification';
-import { qs } from 'query-string';
+import React, { Component, Fragment } from "react";
+import Information from "./Information";
+import qs from "query-string";
+
+import 'swiper/swiper-bundle.css';
+
 
 class Finish extends Component {
     constructor(props) {
@@ -9,12 +11,19 @@ class Finish extends Component {
         this.state = {
             arrayServiceUtilityBooking: [],
 
-            salonId: -1,
             listService: [],
+            note: '',
+            
             show: false,
             isTV: true,
-            isOn: true
+            isOn: true,
         }
+    }
+
+    isChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
 
@@ -36,6 +45,7 @@ class Finish extends Component {
             })
 
         });
+
 
 
     }
@@ -60,8 +70,7 @@ class Finish extends Component {
 
 
     render() {
-        const { arrayServiceUtilityBooking, listService, show, isOn } = this.state;
-        console.log(listService);
+        const { arrayServiceUtilityBooking, listService, show, isOn} = this.state;
         return (
             <div className="booking" >
 
@@ -94,21 +103,13 @@ class Finish extends Component {
 
                     }
 
-
-                    <div className="ant-progress ant-progress-line ant-progress-status-success ant-progress-default line-progress">
-                        <div className="ant-progress-outer">
-                            <div className="ant-progress-inner">
-                                <div className="ant-progress-bg" style={{ width: '100%', height: '8px', background: 'rgb(255, 204, 51)' }} />
-                            </div>
-                        </div>
-                    </div>
                     <div className="top-navigator pointer"><img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" /><span className="uppercase">Hoàn tất</span></div>
                     <div className="extension">
                         <div className="note-extension">
                             <h2 className="title-big">LƯU Ý:</h2>
                             <div className="box-content">
                                 <div className="title"><b>Mỗi SDT chỉ dành cho 1 người. </b>Nếu đi theo nhóm(bố con/bạn bè), vui lòng đặt thêm hoặc thông báo cho nhân viên:</div>
-                                <textarea rows={3} placeholder="Ví dụ: Anh đi 3 bố con/Anh đi cùng hai đứa bạn" className="ant-input" defaultValue={""} />
+                                <textarea rows={3} onChange={(event)=> this.isChange(event)} placeholder="Ví dụ: Anh đi 3 bố con/Anh đi cùng hai đứa bạn" className="ant-input" defaultValue={""} name="note" />
                             </div>
                         </div>
                         <div className="ant-divider ant-divider-horizontal" role="separator" />
@@ -129,7 +130,7 @@ class Finish extends Component {
 
 
 
-                                    : <button type="button" role="switch" className="ant-switch advice-extension__switch" ant-click-animating="false" onClick={() => this.setState({ isOn: true })}>
+                                    : <button type="button" role="switch" className="ant-switch advice-extension__switch" ant-click-animating="false" onClick={() => this.setState({ isOn: true, isTV: true })}>
                                         <div className="ant-switch-handle" />
                                         <span className="ant-switch-inner">
                                             <div className="content-center-middle"><img src="https://30shine.com/static/media/switch-close.821e52e4.svg" alt="" /></div>
@@ -169,7 +170,9 @@ class Finish extends Component {
                             </div>
                         </div>
                     </div>
-                    <Information />
+                    <Information
+                     location={this.props.location}
+                />
                     <div className="mask-affix" style={{ display: 'none' }} />
                     <div />
                 </div>

@@ -14,13 +14,15 @@ class Services extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            salonId: -1,
+            
             arrayServices: [],
             suggestServices: [],
             services: [],
-            lastServices: []
+            lastServices: [],
         }
     }
+
+  
 
     async getDataAsync(string) {
         let response = await fetch(string);
@@ -66,11 +68,6 @@ class Services extends Component {
             ahihi = data;
             this.setState({ arrayServices: ahihi, suggestServices: ahihi.suggestServices, services: ahihi.services, lastServices: ahihi.lastServices })
         });
-
-
-        this.setState({
-            salonId: qs.parse(this.props.location.search).salonId
-        })
     }
 
     showShineCombo = (array, settings1) => {
@@ -150,12 +147,9 @@ class Services extends Component {
                     })}
 
                 </Slider>
-
-
             </div>
             <span className="swiper-notification" aria-live="assertive" aria-atomic="true" />
         </div>
-
 
         return result;
     }
@@ -182,8 +176,8 @@ class Services extends Component {
 
 
 
-        const { salonId, suggestServices, services, lastServices } = this.state;
-        // console.log(lastServices);
+        const { suggestServices, services, lastServices } = this.state;
+        
         return (
             <Fragment>
                 <div className="service-step2">
@@ -198,7 +192,7 @@ class Services extends Component {
 
                 </div>
                 <Information
-                    salonId={salonId}
+                    location={this.props.location}
                 />
             </Fragment>
         );

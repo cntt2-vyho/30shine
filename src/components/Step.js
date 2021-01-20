@@ -25,13 +25,13 @@ class Step extends Component {
                 result = <FindSalon location={this.props.location} history={this.props.history} />;
                 break;
             case 1:
-                result = <Services  location={this.props.location} history={this.props.history}/>;
+                result = <Services location={this.props.location} history={this.props.history} />;
                 break;
             case 2:
                 result = <StyleListAndOptions />;
                 break;
             case 3:
-                result = <Finish  location={this.props.location} history={this.props.history} />;
+                result = <Finish location={this.props.location} history={this.props.history} />;
                 break;
             default:
                 this.setState({ step: 0 });
@@ -40,30 +40,20 @@ class Step extends Component {
         return result;
     };
     render() {
-        // console.log(this.state.step);
+        const { step } = this.state;
         return (
             <div className="booking">
                 <div className="body">
-                    <div className="step">
-                        <div id="step-list">
-                            <div className="step-item">
-                                <span className={this.state.step == 0 ? 'step-item__step active' : 'step-item__step'}>1</span>
-                                <span className="step-item__title">Chọn salon</span>
-                            </div>
-                            <div className="step-item">
-                                <span className={this.state.step == 1 ? 'step-item__step active' : 'step-item__step'}>2</span>
-                                <span className="step-item__title">Chọn dịch vụ</span>
-                            </div>
-                            <div className="step-item">
-                                <span className={this.state.step == 2 ? 'step-item__step active' : 'step-item__step'}>3</span>
-                                <span className="step-item__title">Chọn stylist</span>
-                            </div>
-                            <div className="step-item">
-                                <span className={this.state.step == 3 ? 'step-item__step active' : 'step-item__step'}>4</span>
-                                <span className="step-item__title">Hoàn tất</span>
-                            </div>
-                        </div>
-                    </div>
+                        <div className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default line-progress">
+                            <div className="ant-progress-outer">
+                                {step == 0 && <div className="ant-progress-bg" style={{ width: '0%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+                                {step == 1 && <div className="ant-progress-bg" style={{ width: '33.3333%', height: '8px', background: 'rgb(255, 204, 51)' }}></div>}
+                                {step == 2 && <div className="ant-progress-bg" style={{ width: '66.6667%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+
+                                {step == 3 && <div className="ant-progress-bg" style={{ width: '100%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+
+                            </div> </div>
+                   
 
                     {this.showStep()}
                 </div>

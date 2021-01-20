@@ -254,7 +254,9 @@ class StyleListAndOptions extends Component {
                             <div className />
                         </div>
                     </div>
-                    <Information />
+                    <Information
+                     location={this.props.location}
+                />
             </Fragment>
 
         )

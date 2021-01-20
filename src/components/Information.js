@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import qs from "query-string";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 class Information extends Component {
     constructor(props) {
@@ -28,22 +29,10 @@ class Information extends Component {
                 allSalon: ahihi
             })
         })
-
-        // this.setState({
-        //     salonId: qs.parse(this.props.location.search).salonId
-        // })
     }
 
 
     deleteService = (val) => {
-        // for (var i = 0; i < this.props.listServices.length; i++) {
-        //     if (this.props.listServices[i].id === id) {
-        //         this.props.listServices.splice(i, 1);
-        //         // this.props.totalServices = parseInt(this.props.totalServices) -1;
-        //         console.log(this.props.totalServices);
-        //         // this.props.handleClickParent(this.props.listServices);
-        //     }
-        // }
 
         this.props.chooseService(val);
     }
@@ -80,15 +69,17 @@ class Information extends Component {
 
 
     }
-    
+
 
     redirect = () => {
-        // const newQueryParam = {
-        //     phone: qs.parse(this.props.location.search).phone,
-        //     salonId: this.props.salonId,
-        //     step: 2,
-        // };
-        // this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
+
+        const newQueryParam = {
+            // ...queryParam,
+            phone: qs.parse(this.props.location.search).phone,
+            salonId: qs.parse(this.props.location.search).salonId,
+            step: parseInt(qs.parse(this.props.location.search).step) + parseInt(1)
+        };
+        this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
     }
 
     render() {
@@ -105,7 +96,7 @@ class Information extends Component {
                                 <div className="title flex item-center f-oswald">
                                     <img src="https://30shine.com/static/media/pin%20location.3c5f5a08.svg" alt="" className="icon" />SALON</div>
                                 {allSalon.map(v => {
-                                    if (v.id == this.props.salonId) {
+                                    if (v.id == qs.parse(this.props.location.search).salonId) {
                                         return <div className="content f-be">{v.addressNew}</div>
                                     }
                                 })}
@@ -147,7 +138,11 @@ class Information extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="right button-next pointer" onClick={() => this.redirect()}><span>Chọn giờ cắt</span></div>
+                    <div className="right button-next pointer" onClick={() => this.redirect()}>
+                        {qs.parse(this.props.location.search).step == 1 && <span onClick={() => this.redirect()}>Chọn giờ cắt</span>}
+                        {qs.parse(this.props.location.search).step == 2 && <span onClick={() => this.redirect()}>Tiếp tục</span>}
+                        {qs.parse(this.props.location.search).step == 3 && <span onClick={() => this.redirect()}>Hoàn tất</span>}
+                    </div>
                 </div>
             </div>
 
@@ -168,5 +163,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Information);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Information));
 
