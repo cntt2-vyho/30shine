@@ -180,6 +180,10 @@ class Services extends Component {
         
         return (
             <Fragment>
+                <div className="top-navigator pointer">
+                    <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" />
+                    <span className="uppercase">Chọn dịch vụ</span>
+                </div>
                 <div className="service-step2">
                     <div className="padding-10">
                         {this.showSuggestServices(suggestServices, settings1)}
