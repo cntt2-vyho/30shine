@@ -24,15 +24,9 @@ export default class App extends Component {
 
                         <Route exact  path="/" history={this.props.history} component={Slider} />
                    
+                        <Route exact path="/booking/success" component={Done} />
 
-                        <Route  path="/booking" history={this.props.history} component={Step} />
-                        {/* <Route exact path="/services" component={Services} />
-
-                       
-
-                        <Route exact path="/choose-stylelist-and-options" component={StyleListAndOptions} />
-                        <Route exact path="/finish" component={Finish} /> */}
-                        <Route exact path="/done" component={Done} />
+                        <Route exact path="/booking" history={this.props.history} component={Step} />
 
                         <Route path="/" component={Footer} />
                     </div>

@@ -4,6 +4,7 @@ import Services from "./Services";
 import Finish from "./Finish";
 import StyleListAndOptions from "./StyleListAndOptions";
 import qs from "query-string";
+// import Done from "./Done";
 
 class Step extends Component {
     constructor(props) {
@@ -28,11 +29,15 @@ class Step extends Component {
                 result = <Services location={this.props.location} history={this.props.history} />;
                 break;
             case 2:
-                result = <StyleListAndOptions  location={this.props.location} history={this.props.history}/>;
+                result = <StyleListAndOptions location={this.props.location} history={this.props.history} />;
                 break;
             case 3:
                 result = <Finish location={this.props.location} history={this.props.history} />;
                 break;
+
+            // case 4:
+            //     result = <Done location={this.props.location} history={this.props.history} />;
+            //     break;
             default:
                 this.setState({ step: 0 });
                 break;
@@ -41,19 +46,20 @@ class Step extends Component {
     };
     render() {
         const { step } = this.state;
+        console.log(step);
         return (
             <div className="booking">
                 <div className="body">
-                        <div className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default line-progress">
-                            <div className="ant-progress-outer">
-                                {step == 0 && <div className="ant-progress-bg" style={{ width: '0%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
-                                {step == 1 && <div className="ant-progress-bg" style={{ width: '33.3333%', height: '8px', background: 'rgb(255, 204, 51)' }}></div>}
-                                {step == 2 && <div className="ant-progress-bg" style={{ width: '66.6667%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+                    <div className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default line-progress">
+                        <div className="ant-progress-outer">
+                            {step == 0 && <div className="ant-progress-bg" style={{ width: '0%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+                            {step == 1 && <div className="ant-progress-bg" style={{ width: '33.3333%', height: '8px', background: 'rgb(255, 204, 51)' }}></div>}
+                            {step == 2 && <div className="ant-progress-bg" style={{ width: '66.6667%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
 
-                                {step == 3 && <div className="ant-progress-bg" style={{ width: '100%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+                            {step == 3 && <div className="ant-progress-bg" style={{ width: '100%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
 
-                            </div> </div>
-                   
+                        </div> </div>
+
 
                     {this.showStep()}
                 </div>

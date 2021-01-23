@@ -176,7 +176,7 @@ class Services extends Component {
             slidesToScroll: 2,
             rows: 2,
         };
-        console.log(this.props.history);
+        
 
 
 
