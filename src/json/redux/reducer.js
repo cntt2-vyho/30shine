@@ -2,7 +2,8 @@ import { notificationComponent } from "../../components/utils/notification";
 
 const initialState = {
     listId: [],
-    listObject: []
+    listObject: [],
+    hour: ''
 
 }
 function rootReducer(state = initialState, action) {
@@ -68,7 +69,9 @@ function rootReducer(state = initialState, action) {
                     }
                 }
             }
-
+        case "SET_HOUR":
+            console.log(action.payload);
+            return { ...state, hour: action.payload }
         default:
             return state;
 
