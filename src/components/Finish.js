@@ -14,7 +14,7 @@ class Finish extends Component {
 
             listService: [],
             note: '',
-            
+
             show: false,
             isTV: true,
             isOn: true,
@@ -71,7 +71,7 @@ class Finish extends Component {
 
 
     render() {
-        const { arrayServiceUtilityBooking, listService, show, isOn} = this.state;
+        const { arrayServiceUtilityBooking, listService, show, isOn } = this.state;
         return (
             <div className="booking" >
 
@@ -87,6 +87,15 @@ class Finish extends Component {
                                     <div role="document" className="ant-modal modal-checkbox" style={{ width: '450px', transformOrigin: '421.8px 316px' }}>
                                         <div tabIndex={0} aria-hidden="true" style={{ width: '0px', height: '0px', overflow: 'hidden', outline: 'none' }} />
                                         <div className="ant-modal-content">
+                                            <button type="button" aria-label="Close" className="ant-modal-close" onClick={() => this.setState({ show: false })}>
+                                                <span className="ant-modal-close-x">
+                                                    <span role="img" aria-label="close" className="anticon anticon-close ant-modal-close-icon">
+                                                        <svg viewBox="64 64 896 896" focusable="false" className data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                            <path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z" />
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </button>
                                             <div className="ant-modal-header">
                                                 <div className="ant-modal-title" id="rcDialogTitle0">CÓ VẺ ANH ĐANG GẶP VẤN ĐỀ VỀ TƯ VẤN?</div>
                                             </div>
@@ -105,15 +114,15 @@ class Finish extends Component {
                     }
 
                     <div className="top-navigator pointer">
-                        <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt=""  onClick={() => back(this.props.location, this.props.history)} />
+                        <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" onClick={() => back(this.props.location, this.props.history)} />
                         <span className="uppercase">Hoàn tất</span>
-                        </div>
+                    </div>
                     <div className="extension">
                         <div className="note-extension">
                             <h2 className="title-big">LƯU Ý:</h2>
                             <div className="box-content">
                                 <div className="title"><b>Mỗi SDT chỉ dành cho 1 người. </b>Nếu đi theo nhóm(bố con/bạn bè), vui lòng đặt thêm hoặc thông báo cho nhân viên:</div>
-                                <textarea rows={3} onChange={(event)=> this.isChange(event)} placeholder="Ví dụ: Anh đi 3 bố con/Anh đi cùng hai đứa bạn" className="ant-input" defaultValue={""} name="note" />
+                                <textarea rows={3} onChange={(event) => this.isChange(event)} placeholder="Ví dụ: Anh đi 3 bố con/Anh đi cùng hai đứa bạn" className="ant-input" defaultValue={""} name="note" />
                             </div>
                         </div>
                         <div className="ant-divider ant-divider-horizontal" role="separator" />
@@ -175,8 +184,8 @@ class Finish extends Component {
                         </div>
                     </div>
                     <Information
-                     location={this.props.location}
-                />
+                        location={this.props.location}
+                    />
                     <div className="mask-affix" style={{ display: 'none' }} />
                     <div />
                 </div>

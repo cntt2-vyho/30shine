@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import qs from "query-string";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { notificationComponent } from './utils/notification';
 
 class Information extends Component {
     constructor(props) {
@@ -73,13 +74,22 @@ class Information extends Component {
 
     redirect = () => {
 
-        const newQueryParam = {
-            // ...queryParam,
-            phone: qs.parse(this.props.location.search).phone,
-            salonId: qs.parse(this.props.location.search).salonId,
-            step: parseInt(qs.parse(this.props.location.search).step) + parseInt(1)
-        };
-        this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
+        if (parseInt(qs.parse(this.props.location.search).step) == 3) {
+
+            notificationComponent('success', "Đặt lịch thành công");
+            setTimeout(() => {
+                this.props.history.push({ pathname: '/booking/success', state: { search: qs.parse(this.props.location.search)}});
+            }, 3000);
+        }
+        else {
+            const newQueryParam = {
+                // ...queryParam,
+                phone: qs.parse(this.props.location.search).phone,
+                salonId: qs.parse(this.props.location.search).salonId,
+                step: parseInt(qs.parse(this.props.location.search).step) + parseInt(1)
+            };
+            this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
+        }
     }
 
     render() {
@@ -139,9 +149,9 @@ class Information extends Component {
                         </div>
                     </div>
                     <div className="right button-next pointer" onClick={() => this.redirect()}>
-                        {qs.parse(this.props.location.search).step == 1 && <span onClick={() => this.redirect()}>Chọn giờ cắt</span>}
-                        {qs.parse(this.props.location.search).step == 2 && <span onClick={() => this.redirect()}>Tiếp tục</span>}
-                        {qs.parse(this.props.location.search).step == 3 && <span onClick={() => this.redirect()}>Hoàn tất</span>}
+                        {qs.parse(this.props.location.search).step == 1 && <span>Chọn giờ cắt</span>}
+                        {qs.parse(this.props.location.search).step == 2 && <span>Tiếp tục</span>}
+                        {qs.parse(this.props.location.search).step == 3 && <span>Hoàn tất</span>}
                     </div>
                 </div>
             </div>
