@@ -6,65 +6,60 @@ import StyleListAndOptions from "./StyleListAndOptions";
 import qs from "query-string";
 
 class Step extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      step:parseInt(qs.parse(this.props.location.search).step)
+    constructor(props) {
+        super(props);
+        this.state = {
+            step: parseInt(qs.parse(this.props.location.search).step)
+        }
     }
-  }
-  
-  showStep = () => {
-    let result = <FindSalon />;
-    switch (this.state.step) {
-      case 0:
-        result = <FindSalon />;
-        break;
-      case 1:
-        result = <Services />;
-        break;
-      case 2:
-        result = <StyleListAndOptions />;
-        break;
-      case 3:
-        result = <Finish />;
-        break;
-      default:
-        this.setState({step:0});
-        break;
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            step: parseInt(qs.parse(nextProps.location.search).step)
+        })
     }
-    return result;
-  };
-  render() {
-    console.log(this.state.step=='0');
-    return (
-      <div className="booking">
-        <div className="body">
-          <div className="step">
-            <div id="step-list">
-              <div className="step-item">
-                <span className={ this.state.step==0? 'step-item__step active':'step-item__step'}>1</span>
-                <span className="step-item__title">Chọn salon</span>
-              </div>
-              <div className="step-item">
-                <span className={this.state.step==1? 'step-item__step active':'step-item__step'}>2</span>
-                <span className="step-item__title">Chọn dịch vụ</span>
-              </div>
-              <div className="step-item">
-                <span className={this.state.step==2? 'step-item__step active':'step-item__step'}>3</span>
-                <span className="step-item__title">Chọn stylist</span>
-              </div>
-              <div className="step-item">
-                <span className={this.state.step==3? 'step-item__step active':'step-item__step'}>4</span>
-                <span className="step-item__title">Hoàn tất</span>
-              </div>
-            </div>
-          </div>
 
-          {this.showStep()}
-        </div>
-      </div>
-    );
-  }
+    showStep = () => {
+        let result = <FindSalon location={this.props.location} history={this.props.history} />;
+        switch (this.state.step) {
+            case 0:
+                result = <FindSalon location={this.props.location} history={this.props.history} />;
+                break;
+            case 1:
+                result = <Services location={this.props.location} history={this.props.history} />;
+                break;
+            case 2:
+                result = <StyleListAndOptions  location={this.props.location} history={this.props.history}/>;
+                break;
+            case 3:
+                result = <Finish location={this.props.location} history={this.props.history} />;
+                break;
+            default:
+                this.setState({ step: 0 });
+                break;
+        }
+        return result;
+    };
+    render() {
+        const { step } = this.state;
+        return (
+            <div className="booking">
+                <div className="body">
+                        <div className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default line-progress">
+                            <div className="ant-progress-outer">
+                                {step == 0 && <div className="ant-progress-bg" style={{ width: '0%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+                                {step == 1 && <div className="ant-progress-bg" style={{ width: '33.3333%', height: '8px', background: 'rgb(255, 204, 51)' }}></div>}
+                                {step == 2 && <div className="ant-progress-bg" style={{ width: '66.6667%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+
+                                {step == 3 && <div className="ant-progress-bg" style={{ width: '100%', height: '8px', background: 'rgb(255, 204, 51)' }} />}
+
+                            </div> </div>
+                   
+
+                    {this.showStep()}
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Step;

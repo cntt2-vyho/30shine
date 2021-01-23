@@ -1,0 +1,881 @@
+{
+    "data": [
+        {
+            "order": 1,
+            "categoryName": "CẮT TÓC",
+            "services": [
+                {
+                    "order": 1,
+                    "categoryId": 1,
+                    "serviceId": 53,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 53,
+                            "name": "Combo Cắt Gội 7 bước",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 1,
+                    "name": "Combo Cắt Gội 7 bước",
+                    "subtitle": "Combo cắt gội thư giãn 7 bước độc quyền (Shine Combo)",
+                    "description": "Tặng thêm Giường Massage Nhật Bản trị giá 20K khi chọn thêm 1 trong các dịch vụ chăm sóc da dưới đây",
+                    "timeServe": "45 phút",
+                    "campaignId": null,
+                    "price": "85K",
+                    "oldPrice": "100K",
+                    "priceNum": 85000,
+                    "selected": 0,
+                    "tags": [
+                        "Đã từng dùng"
+                    ],
+                    "used": 1,
+                    "listService": [
+                        {
+                            "order": 1,
+                            "categoryId": 1,
+                            "serviceId": 364,
+                            "parentServiceId": 53,
+                            "comboDetail": [
+                                {
+                                    "id": 364,
+                                    "name": "Tẩy da chết & Đắp mặt nạ",
+                                    "type": "service",
+                                    "skillId": "0"
+                                }
+                            ],
+                            "group": 53,
+                            "name": "Tẩy da chết & Đắp mặt nạ",
+                            "subtitle": null,
+                            "description": null,
+                            "timeServe": "+5 phút",
+                            "campaignId": null,
+                            "price": "40K",
+                            "oldPrice": null,
+                            "priceNum": 40000,
+                            "selected": 0,
+                            "tags": [],
+                            "used": 0,
+                            "listService": null,
+                            "noDisplay": false
+                        },
+                        {
+                            "order": 2,
+                            "categoryId": 1,
+                            "serviceId": 359,
+                            "parentServiceId": 53,
+                            "comboDetail": [
+                                {
+                                    "id": 359,
+                                    "name": "Chăm sóc lột mụn cám + tẩy da chết + đắp mặt nạ",
+                                    "type": "service",
+                                    "skillId": "0"
+                                }
+                            ],
+                            "group": 53,
+                            "name": "Chăm sóc lột mụn cám + tẩy da chết + đắp mặt nạ",
+                            "subtitle": null,
+                            "description": null,
+                            "timeServe": "+8 phút",
+                            "campaignId": null,
+                            "price": "65K",
+                            "oldPrice": null,
+                            "priceNum": 65000,
+                            "selected": 0,
+                            "tags": [],
+                            "used": 0,
+                            "listService": null,
+                            "noDisplay": false
+                        },
+                        {
+                            "order": 3,
+                            "categoryId": 1,
+                            "serviceId": 396,
+                            "parentServiceId": 53,
+                            "comboDetail": [
+                                {
+                                    "id": 396,
+                                    "name": "Detox da đầu - Tẩy da chết - Đắp mặt nạ",
+                                    "type": "service",
+                                    "skillId": "0"
+                                }
+                            ],
+                            "group": 53,
+                            "name": "Detox da đầu - Tẩy da chết - Đắp mặt nạ",
+                            "subtitle": null,
+                            "description": null,
+                            "timeServe": "+10 phút",
+                            "campaignId": null,
+                            "price": "65K",
+                            "oldPrice": null,
+                            "priceNum": 65000,
+                            "selected": 0,
+                            "tags": [],
+                            "used": 0,
+                            "listService": null,
+                            "noDisplay": false
+                        },
+                        {
+                            "order": 4,
+                            "categoryId": 1,
+                            "serviceId": 397,
+                            "parentServiceId": 53,
+                            "comboDetail": [
+                                {
+                                    "id": 397,
+                                    "name": "Chăm sóc toàn diện (PRO)",
+                                    "type": "service",
+                                    "skillId": "0"
+                                }
+                            ],
+                            "group": 53,
+                            "name": "Chăm sóc toàn diện (PRO)",
+                            "subtitle": null,
+                            "description": null,
+                            "timeServe": "+12 phút",
+                            "campaignId": null,
+                            "price": "85K",
+                            "oldPrice": null,
+                            "priceNum": 85000,
+                            "selected": 0,
+                            "tags": [],
+                            "used": 0,
+                            "listService": null,
+                            "noDisplay": false
+                        }
+                    ],
+                    "noDisplay": false
+                },
+                {
+                    "order": 2,
+                    "categoryId": 1,
+                    "serviceId": 382,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 382,
+                            "name": "Cắt xả",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 1,
+                    "name": "Cắt xả",
+                    "subtitle": "Cắt - xả - vuốt sáp nhanh gọn, không gội đầu massage",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "70K",
+                    "oldPrice": null,
+                    "priceNum": 70000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 3,
+                    "categoryId": 1,
+                    "serviceId": 62,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 62,
+                            "name": "KID COMBO",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 1,
+                    "name": "KID COMBO",
+                    "subtitle": "Cắt tóc gội đầu trẻ em (mỹ phẩm riêng cao cấp, lành tính)",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "80K",
+                    "oldPrice": null,
+                    "priceNum": 80000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "order": 2,
+            "categoryName": "UỐN",
+            "services": [
+                {
+                    "order": 2,
+                    "categoryId": 2,
+                    "serviceId": 107,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 107,
+                            "name": "Uốn cao cấp Ý nhiều dưỡng chất",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn cao cấp Ý nhiều dưỡng chất",
+                    "subtitle": "Thuốc uốn ATS của Ý nhập khẩu chính ngạch, chứa Amino Axit tinh khiết giúp giảm thiểu tối đa tổn thương tóc",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "315K",
+                    "oldPrice": "349K",
+                    "priceNum": 315000,
+                    "selected": 0,
+                    "tags": [
+                        "Đã từng dùng"
+                    ],
+                    "used": 1,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 3,
+                    "categoryId": 2,
+                    "serviceId": 16,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 16,
+                            "name": "Uốn tiêu chuẩn Hàn",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn tiêu chuẩn Hàn",
+                    "subtitle": "Thuốc uốn Hàn Quốc hương cafe nhập khẩu chính ngạch, tạo sóng tốt, căng và bóng",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "234K",
+                    "oldPrice": "260K",
+                    "priceNum": 234000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 4,
+                    "categoryId": 2,
+                    "serviceId": 271,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 271,
+                            "name": "Uốn Texture con sâu trẻ trung",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn Texture con sâu trẻ trung",
+                    "subtitle": "Sử dụng kỹ thuật tạo kiểu hiện đại được hướng dẫn bởi chuyên gia Hàn Quốc, giúp người sở hữu mái tóc trẻ hơn đến 10 tuổi",
+                    "description": null,
+                    "timeServe": "2 tiếng",
+                    "campaignId": null,
+                    "price": "449K",
+                    "oldPrice": "499K",
+                    "priceNum": 449000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "order": 3,
+            "categoryName": "NHUỘM",
+            "services": [
+                {
+                    "order": 7,
+                    "categoryId": 3,
+                    "serviceId": 329,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 329,
+                            "name": "Nhuộm phủ bạc thảo dược",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 3,
+                    "name": "Nhuộm phủ bạc thảo dược",
+                    "subtitle": "Thuốc nhuộm Hàn Quốc được chiết suất từ 6 loại thảo dược giúp tóc đen bóng, da đầu chắc khoẻ",
+                    "description": null,
+                    "timeServe": "45 phút",
+                    "campaignId": null,
+                    "price": "162K",
+                    "oldPrice": "180K",
+                    "priceNum": 162000,
+                    "selected": 0,
+                    "tags": [
+                        "Đã từng dùng"
+                    ],
+                    "used": 1,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 7,
+                    "categoryId": 3,
+                    "serviceId": 350,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 350,
+                            "name": "Nhuộm màu thời trang nổi bật (tuỳ màu có thể cần tẩy thêm để lên đẹp hơn)",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 3,
+                    "name": "Nhuộm màu thời trang nổi bật (tuỳ màu có thể cần tẩy thêm để lên đẹp hơn)",
+                    "subtitle": "Màu nhuộm Italy nhập khẩu chính hãng, chứa thành phần sáp ong, dầu dừa giúp tóc bóng mượt hơn ngay sau khi nhuộm",
+                    "description": null,
+                    "timeServe": "1 tiếng",
+                    "campaignId": null,
+                    "price": "260K",
+                    "oldPrice": "289K",
+                    "priceNum": 260000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 7,
+                    "categoryId": 3,
+                    "serviceId": 330,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 330,
+                            "name": "Nhuộm màu công sở",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 3,
+                    "name": "Nhuộm màu công sở",
+                    "subtitle": "Màu nhuộm Echoslise chứa sáp ong, Vitamin C và dầu dừa, vượt qua nhiều tiêu chuẩn khắt khe để trở thành dòng màu nhuộm được ưa chuộng hàng đầu tại các salon cao cấp ở Châu Âu và Italy",
+                    "description": null,
+                    "timeServe": "1 tiếng",
+                    "campaignId": null,
+                    "price": "224K",
+                    "oldPrice": "249K",
+                    "priceNum": 224000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "order": 5,
+            "categoryName": "DỊCH VỤ KHÁC",
+            "services": [
+                {
+                    "order": 1,
+                    "categoryId": 5,
+                    "serviceId": 109,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 109,
+                            "name": "GỘI ĐẦU MASSAGE VUỐT SÁP",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "GỘI ĐẦU MASSAGE VUỐT SÁP",
+                    "subtitle": "Gội đầu massage sảng khoái & Sấy vuốt sáp tạo kiểu",
+                    "description": null,
+                    "timeServe": "20 phút",
+                    "campaignId": null,
+                    "price": "45K",
+                    "oldPrice": null,
+                    "priceNum": 45000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 1,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 2,
+                    "categoryId": 5,
+                    "serviceId": 324,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 324,
+                            "name": "Lấy ráy tai",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Lấy ráy tai",
+                    "subtitle": "Dụng cụ được khử trùng sạch sẽ kết hợp bài massage Trung Hoa",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "30K",
+                    "oldPrice": null,
+                    "priceNum": 30000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 3,
+                    "categoryId": 5,
+                    "serviceId": 90,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 90,
+                            "name": "Đắp mặt nạ",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Đắp mặt nạ",
+                    "subtitle": "Mặt nạ dưỡng chất Hàn Quốc, an toàn, phù hợp nhiều loại da",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "20K",
+                    "oldPrice": null,
+                    "priceNum": 20000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 4,
+                    "categoryId": 5,
+                    "serviceId": 300,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 300,
+                            "name": "Tẩy da chết sủi bọt",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Tẩy da chết sủi bọt",
+                    "subtitle": "Công nghệ sủi bọt tiên tiến, đánh bay da chết, bụi bẩn, bã nhờn sâu bên trong",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "25K",
+                    "oldPrice": null,
+                    "priceNum": 25000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 5,
+                    "categoryId": 5,
+                    "serviceId": 115,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 115,
+                            "name": "Lấy mụn bằng que gạt",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Lấy mụn bằng que gạt",
+                    "subtitle": "Sử dụng mỹ phẩm đẩy cồi mụn kết hợp que gạt lấy nhân mụn (chỉ dùng 1 lần riêng từng khách)",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "30K",
+                    "oldPrice": null,
+                    "priceNum": 30000,
+                    "selected": 0,
+                    "tags": [
+                        "Đã từng dùng"
+                    ],
+                    "used": 1,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 6,
+                    "categoryId": 5,
+                    "serviceId": 247,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 247,
+                            "name": "Lột Mụn Than Tre",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Lột Mụn Than Tre",
+                    "subtitle": "Thành phần chính từ than tre hoạt tính, lột siêu sạch, nhẹ nhàng",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "30K",
+                    "oldPrice": null,
+                    "priceNum": 30000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 7,
+                    "categoryId": 5,
+                    "serviceId": 189,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 189,
+                            "name": "Giường massage Nhật Bản",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Giường massage Nhật Bản",
+                    "subtitle": "Công nghệ S track Nhật Bản với 4 trục đấm, bóp, di huyệt được chuyên gia thiết kế riêng cho người Châu Á",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "20K",
+                    "oldPrice": null,
+                    "priceNum": 20000,
+                    "selected": 0,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        }
+    ],
+    "rulesNextStep": [
+        {
+            "serviceSelected": "^(53;|397;|){2}$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Anh có muốn thử dùng thêm Uốn hoặc Nhuộm để Tết đẹp trai phong độ hơn trong mắt các chị em không?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 2,
+                    "serviceId": 16,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 16,
+                            "name": "Uốn tiêu chuẩn Hàn",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn tiêu chuẩn Hàn",
+                    "subtitle": "Thuốc uốn Hàn Quốc hương cafe nhập khẩu chính ngạch, tạo sóng tốt, căng và bóng",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "234K",
+                    "oldPrice": "260K",
+                    "priceNum": 234000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^382;$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Anh chị có muốn chọn thêm dịch vụ uốn (30 phút) cho bé đón Tết không ạ?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 2,
+                    "serviceId": 16,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 16,
+                            "name": "Uốn tiêu chuẩn Hàn",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn tiêu chuẩn Hàn",
+                    "subtitle": "Thuốc uốn Hàn Quốc hương cafe nhập khẩu chính ngạch, tạo sóng tốt, căng và bóng",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "234K",
+                    "oldPrice": "260K",
+                    "priceNum": 234000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^53;$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Dịch vụ cắt thường được dùng kèm tẩy da chết và đắp mặt nạ để giúp da sáng mịn, anh dùng nhé?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 5,
+                    "serviceId": 300,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 300,
+                            "name": "Tẩy da chết sủi bọt",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Tẩy da chết sủi bọt",
+                    "subtitle": "Công nghệ sủi bọt tiên tiến, đánh bay da chết, bụi bẩn, bã nhờn sâu bên trong",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "25K",
+                    "oldPrice": null,
+                    "priceNum": 25000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                },
+                {
+                    "order": 2,
+                    "categoryId": 5,
+                    "serviceId": 90,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 90,
+                            "name": "Đắp mặt nạ",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Đắp mặt nạ",
+                    "subtitle": "Mặt nạ dưỡng chất Hàn Quốc, an toàn, phù hợp nhiều loại da",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "20K",
+                    "oldPrice": null,
+                    "priceNum": 20000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^382;$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Anh đang chọn dịch vụ không gội, mình có muốn dành ra thêm khoảng 10 phút để đổi sang trải nghiệm dịch vụ thích nhất bên em không?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 1,
+                    "serviceId": 53,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 53,
+                            "name": "Combo Cắt Gội 7 bước",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 1,
+                    "name": "Combo Cắt Gội 7 bước",
+                    "subtitle": "Combo cắt gội thư giãn 7 bước độc quyền (Shine Combo)",
+                    "description": null,
+                    "timeServe": "45 phút",
+                    "campaignId": null,
+                    "price": "85K",
+                    "oldPrice": "100K",
+                    "priceNum": 85000,
+                    "selected": 1,
+                    "tags": [
+                        "Đã từng dùng"
+                    ],
+                    "used": 1,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^(53;|364;|){2}$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Bụi bẩn ngoài đường làm tích tụ mụn đầu đen, anh có muộn lột sạch cằm và mũi không? Chọn ngay chỉ cộng thêm 20k",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 5,
+                    "serviceId": 247,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 247,
+                            "name": "Lột Mụn Than Tre",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 0,
+                    "name": "Lột Mụn Than Tre",
+                    "subtitle": "Thành phần chính từ than tre hoạt tính, lột siêu sạch, nhẹ nhàng",
+                    "description": null,
+                    "timeServe": null,
+                    "campaignId": null,
+                    "price": "30K",
+                    "oldPrice": null,
+                    "priceNum": 30000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^(53;|359;|){2}$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Tết Uốn 1 chút để đỡ phải gôm sáp nhiều, anh có muốn dùng luôn lần này không?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 2,
+                    "serviceId": 16,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 16,
+                            "name": "Uốn tiêu chuẩn Hàn",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn tiêu chuẩn Hàn",
+                    "subtitle": "Thuốc uốn Hàn Quốc hương cafe nhập khẩu chính ngạch, tạo sóng tốt, căng và bóng",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "234K",
+                    "oldPrice": "260K",
+                    "priceNum": 234000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        },
+        {
+            "serviceSelected": "^(53;|396;|){2}$",
+            "ruleType": "regex",
+            "image": null,
+            "title": "Tết Uốn 1 chút để đỡ phải gôm sáp nhiều, anh có muốn dùng luôn lần này không?",
+            "listService": [
+                {
+                    "order": 1,
+                    "categoryId": 2,
+                    "serviceId": 16,
+                    "parentServiceId": 0,
+                    "comboDetail": [
+                        {
+                            "id": 16,
+                            "name": "Uốn tiêu chuẩn Hàn",
+                            "type": "service",
+                            "skillId": "0"
+                        }
+                    ],
+                    "group": 2,
+                    "name": "Uốn tiêu chuẩn Hàn",
+                    "subtitle": "Thuốc uốn Hàn Quốc hương cafe nhập khẩu chính ngạch, tạo sóng tốt, căng và bóng",
+                    "description": null,
+                    "timeServe": "30 phút",
+                    "campaignId": null,
+                    "price": "234K",
+                    "oldPrice": "260K",
+                    "priceNum": 234000,
+                    "selected": 1,
+                    "tags": [],
+                    "used": 0,
+                    "listService": null,
+                    "noDisplay": false
+                }
+            ]
+        }
+    ]
+}

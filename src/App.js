@@ -21,18 +21,17 @@ export default class App extends Component {
                     <div className="content">
                         <Route path="/" component={Header} />
 
-                        <Route path="/" component={PhoneError} />
 
                         <Route exact  path="/" history={this.props.history} component={Slider} />
-                        {/* <Route exact path="/" component={Home} /> */}
+                   
 
                         <Route  path="/booking" history={this.props.history} component={Step} />
-                        <Route exact path="/services" component={Services} />
+                        {/* <Route exact path="/services" component={Services} />
 
-                        {/* <Route  path="/servives" component={Information} /> */}
+                       
 
                         <Route exact path="/choose-stylelist-and-options" component={StyleListAndOptions} />
-                        <Route exact path="/finish" component={Finish} />
+                        <Route exact path="/finish" component={Finish} /> */}
                         <Route exact path="/done" component={Done} />
 
                         <Route path="/" component={Footer} />
