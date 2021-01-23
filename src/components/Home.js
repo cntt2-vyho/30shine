@@ -1,25 +1,35 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
 
 class Home extends Component {
-
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
+    this.state={
+      phone : ''
     }
-    phoneBook = (event) => {
-        // const queryParam = qs.parse(location.search);
-        if (event.key == "Enter") {
-            const newQueryParam = {
-                // ...queryParam,
-                phone: event.target.value,
-                salonId: 0,
-                step: 0,
-            };
-            this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
-
-        }
+  }
+  redirectBooking  = () => {
+    const newQueryParam = {
+      phone: this.state.phone,
+      salonId:0,
+      step:0,
     };
+    this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
+
+  }
+  phoneBook = (event) => {
+    // console.log(event);
+   if( event.type=='keypress' && event.key == "Enter")
+     { 
+      this.redirectBooking();
+    }
+    else if(event.type=='change'){
+      this.setState({
+        [event.target.name]: event.target.value
+      });
+    }
+}
 
 
     render() {
@@ -42,6 +52,7 @@ class Home extends Component {
                             placeholder="* Nhập số điện thoại (vd: 0987xxxxxx)"
                             type="tel"
                             className="my-input"
+                            name= "phone"
                             onKeyPress={(event) => this.phoneBook(event)}
                         />
                     </div>

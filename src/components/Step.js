@@ -7,18 +7,18 @@ import qs from "query-string";
 // import Done from "./Done";
 
 class Step extends Component {
-    constructor(props) {
+
+   constructor(props) {
         super(props);
         this.state = {
             step: parseInt(qs.parse(this.props.location.search).step)
         }
     }
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            step: parseInt(qs.parse(nextProps.location.search).step)
-        })
-    }
-
+  componentWillReceiveProps (nextProps){
+    this.setState({
+      step:parseInt(qs.parse(nextProps.location.search).step)
+    })
+  }
     showStep = () => {
         let result = <FindSalon location={this.props.location} history={this.props.history} />;
         switch (this.state.step) {
