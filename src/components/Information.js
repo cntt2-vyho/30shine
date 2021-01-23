@@ -118,8 +118,9 @@ class Information extends Component {
                                         <div className="content">{this.getCurrentDate()}</div>
                                     </div>
                                     <div className="ant-col ant-col-8">
-                                        <div className="title flex item-center"><img src="https://30shine.com/static/media/time.ffd37a1c.svg" alt="" className="icon" />GIỜ</div>
-                                        <div className="content" />
+                                        <div className="title flex item-center">
+                                            <img src="https://30shine.com/static/media/time.ffd37a1c.svg" alt="" className="icon" />GIỜ</div>
+                                            <div className="content">{this.props.hour}</div>
                                     </div>
                                     <div className="ant-col ant-col-8">
                                         <div className="title flex item-center"><img src="https://30shine.com/static/media/user2.00eb2b41.svg" alt="" className="icon" />STYLIST</div>
@@ -161,7 +162,8 @@ class Information extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        listId: state.listId
+        listId: state.listId,
+        hour: state.hour
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

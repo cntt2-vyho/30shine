@@ -59,7 +59,7 @@ class Home extends Component {
                     <div
                         style={{ display: "flex", textAlign: "center", marginTop: "10px" }}
                     >
-                        <NavLink className="btn-booking" to="/findSalon">
+                        <div className="btn-booking" onClick={() => this.redirectBooking()}>
                             <div>
                                 <span className="booking-text">
                                     ĐẶT LỊCH GIỮ CHỖ &nbsp;
@@ -78,7 +78,7 @@ class Home extends Component {
                             <span className="cancle">
                                 Cắt xong trả tiền, Hủy lịch không sao
               </span>
-                        </NavLink>
+                        </div>
                         <div className="btn-history">XEM LẠI LỊCH ANH ĐÃ ĐẶT</div>
                     </div>
                 </div>
