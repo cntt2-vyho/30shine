@@ -1,5 +1,44 @@
 import React, { Component, Fragment } from "react";
 import Information from "./Information";
+import Swiper from 'react-id-swiper';
+
+
+const params = {
+  Swiper,
+  navigation: {
+    nextEl: 'btn-action btn-left',
+    prevEl: 'btn-action btn-right'
+  },
+  renderPrevButton: () => <div className="btn-action btn-left">
+    <img
+      src="/static/media/arrowLeft.7b648ba9.svg"
+      alt=""
+      className="icon-btn"
+    />
+  </div>,
+  renderNextButton: () => <div className="btn-action btn-right">
+    <img
+      src="https://30shine.com/static/media/arrowRight.613c1613.svg"
+      alt=""
+      className="icon-btn"
+    />
+  </div>,
+      loop: true,
+
+}
+const ref =null;
+const swiper=null
+const goNext = () => {
+  if (ref.current !== null && ref.current.swiper !== null) {
+    swiper.slideNext();
+  }
+};
+
+ const goPrev = () => {
+  if (ref.current !== null && ref.current.swiper !== null) {
+    swiper.slidePrev();
+  }
+};
 
 class StyleListAndOptions extends Component {
   constructor(props) {
@@ -11,7 +50,6 @@ class StyleListAndOptions extends Component {
     };
   }
   async getDataAsync(string) {
-    console.log(string);
     let response = await fetch(string);
     let data = await response.json();
     return data;
@@ -22,19 +60,17 @@ class StyleListAndOptions extends Component {
     this.getStylistDate(date.getDate())
 
   }
-  getStylistDate  = (date) => {
-    this.state.dateSelect!=date && this.getDataAsync(
-        `https://3sgus10dig.execute-api.ap-southeast-1.amazonaws.com/Prod/api-booking/stylist?salonId=${
-          this.props.salonId
-        }&workDate=${date}-${
-          this.state.date.getMonth() + 1
-        }-${this.state.date.getFullYear()}&customerPhone=${this.props.phone}`
-      ).then((data) => this.setState({ stylists: data, dateSelect:date }));
+  getStylistDate = (date) => {
+    this.state.dateSelect != date && this.getDataAsync(
+      `https://3sgus10dig.execute-api.ap-southeast-1.amazonaws.com/Prod/api-booking/stylist?salonId=${this.props.salonId
+      }&workDate=${date}-${this.state.date.getMonth() + 1
+      }-${this.state.date.getFullYear()}&customerPhone=${this.props.phone}`
+    ).then((data) => this.setState({ stylists: data, dateSelect: date }));
   }
   loadStylist = () => {
     console.log(this.state);
     let result = this.state.stylists.map((val, key) => (
-      <div className="swiper-slide item" style={{ width: "91.8605px" }}>
+      <div className="swiper-slide item" style={{ width: "91.8605px" }} key={key}>
         <div className="content-center-middle">
           <div className="relative">
             <img
@@ -54,7 +90,9 @@ class StyleListAndOptions extends Component {
     ));
     return result;
   };
-  
+
+
+
 
   render() {
     return (
@@ -66,48 +104,48 @@ class StyleListAndOptions extends Component {
                 <div className="swiper-container swiper-container-initialized swiper-container-horizontal">
                   <div className="swiper-wrapper">
                     <div
-                      className={`swiper-slide active-day  ${this.state.dateSelect==this.state.date.getDate()?"bg-30s active-day":"bg-e8"}   item-action text-center pointer h3 br-2 swiper-slide-active`}
+                      className={`swiper-slide active-day  ${this.state.dateSelect == this.state.date.getDate() ? "bg-30s active-day" : "bg-e8"}   item-action text-center pointer h3 br-2 swiper-slide-active`}
                       style={{ width: "153.333px", marginRight: "10px" }}
                     >
                       <div
                         className="name-day"
-                        onClick={()=>this.getStylistDate(this.state.date.getDate())}
+                        onClick={() => this.getStylistDate(this.state.date.getDate())}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
                         }}
                       >
-                        Hôm nay {`${this.state.date.getDate()}/${this.state.date.getMonth()+1}`}
+                        Hôm nay {`${this.state.date.getDate()}/${this.state.date.getMonth() + 1}`}
                       </div>
                     </div>
                     <div
-                      className={`swiper-slide ${this.state.dateSelect== this.state.date.getDate()+1?"bg-30s":"bg-e8"}  item-action bg-30s text-center pointer h3 br-2 swiper-slide-next`}
+                      className={`swiper-slide ${this.state.dateSelect == this.state.date.getDate() + 1 ? "bg-30s" : "bg-e8"}  item-action bg-30s text-center pointer h3 br-2 swiper-slide-next`}
                       style={{ width: "153.333px", marginRight: "10px" }}
                     >
                       <div
                         className="name-day"
-                        onClick={()=>this.getStylistDate(this.state.date.getDate()+1)}
+                        onClick={() => this.getStylistDate(this.state.date.getDate() + 1)}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
                         }}
                       >
-                        Ngày mai {`${this.state.date.getDate()+1}/${this.state.date.getMonth()+1}`}
+                        Ngày mai {`${this.state.date.getDate() + 1}/${this.state.date.getMonth() + 1}`}
                       </div>
                     </div>
                     <div
-                      className={`swiper-slide ${this.state.dateSelect==this.state.date.getDate()+2?"bg-30s":"bg-e8"} item-action bg-30s text-center pointer h3 br-2`}
+                      className={`swiper-slide ${this.state.dateSelect == this.state.date.getDate() + 2 ? "bg-30s" : "bg-e8"} item-action bg-30s text-center pointer h3 br-2`}
                       style={{ width: "153.333px", marginRight: "10px" }}
                     >
                       <div
                         className="name-day"
-                        onClick={()=>this.getStylistDate(this.state.date.getDate()+2)}
+                        onClick={() => this.getStylistDate(this.state.date.getDate() + 2)}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
                         }}
                       >
-                        Ngày kia {`${this.state.date.getDate()+2}/${this.state.date.getMonth()+1}`}
+                        Ngày kia {`${this.state.date.getDate() + 2}/${this.state.date.getMonth() + 1}`}
                       </div>
                     </div>
                   </div>
@@ -140,7 +178,7 @@ class StyleListAndOptions extends Component {
                 </div>
               </div>
               <div className="right relative">
-                <div className="btn-action btn-left btn_hide">
+                {/* <div className="btn-action btn-left btn_hide">
                   <img
                     src="/static/media/arrowLeft.7b648ba9.svg"
                     alt=""
@@ -153,13 +191,16 @@ class StyleListAndOptions extends Component {
                     alt=""
                     className="icon-btn"
                   />
-                </div>
+                </div> */}
                 <div className="swiper-container swiper-container-initialized swiper-container-horizontal">
                   <div
                     className="swiper-wrapper"
                     style={{ transform: "translate3d(0px, 0px, 0px)" }}
                   >
-                    {this.loadStylist()}
+
+                    <Swiper {...params} ref={ref}>
+                      {this.loadStylist()}
+                    </Swiper>
                   </div>
                   <span
                     className="swiper-notification"
