@@ -1,76 +1,110 @@
 import React, { Component, Fragment } from "react";
 import Information from "./Information";
 import Swiper from 'react-id-swiper';
+import qs from "query-string";
+import Slider from "react-slick";
 
-
-const params = {
-  Swiper,
-  navigation: {
-    nextEl: 'btn-action btn-left',
-    prevEl: 'btn-action btn-right'
-  },
-  renderPrevButton: () => <div className="btn-action btn-left">
-    <img
-      src="/static/media/arrowLeft.7b648ba9.svg"
-      alt=""
-      className="icon-btn"
-    />
-  </div>,
-  renderNextButton: () => <div className="btn-action btn-right">
-    <img
-      src="https://30shine.com/static/media/arrowRight.613c1613.svg"
-      alt=""
-      className="icon-btn"
-    />
-  </div>,
-      loop: true,
-
-}
-const ref =null;
-const swiper=null
-const goNext = () => {
-  if (ref.current !== null && ref.current.swiper !== null) {
-    swiper.slideNext();
-  }
+const settings1 = {
+  dots: false,
+  arrows: true,
+  infinite: false,
+  speed: 300,
+  centerMargin: "60px",
+  slidesToShow: 6,
+  slidesToScroll: 4
 };
 
- const goPrev = () => {
-  if (ref.current !== null && ref.current.swiper !== null) {
-    swiper.slidePrev();
-  }
-};
+// const params = {
+//   Swiper,
+//   navigation: {
+//     nextEl: 'btn-action btn-left',
+//     prevEl: 'btn-action btn-right'
+//   },
+//   renderPrevButton: () => <div className="btn-action btn-left">
+//     <img
+//       src="/static/media/arrowLeft.7b648ba9.svg"
+//       alt=""
+//       className="icon-btn"
+//     />
+//   </div>,
+//   renderNextButton: () => <div className="btn-action btn-right">
+//     <img
+//       src="https://30shine.com/static/media/arrowRight.613c1613.svg"
+//       alt=""
+//       className="icon-btn"
+//     />
+//   </div>,
+//   loop: true,
 
+// }
+
+// const ref = null;
+// const swiper = null
+// const goNext = () => {
+//   if (ref.current !== null && ref.current.swiper !== null) {
+//     swiper.slideNext();
+//   }
+// };
+
+// const goPrev = () => {
+//   if (ref.current !== null && ref.current.swiper !== null) {
+//     swiper.slidePrev();
+//   }
+// };
 class StyleListAndOptions extends Component {
   constructor(props) {
     super(props);
     this.state = {
       stylists: [],
       date: new Date(),
-      dateSelect: 0
+      dateSelect: new Date().getDate(),
+      stylistSelected: 0,
+      hours: [],
+      hourSelected: 0
     };
   }
+
   async getDataAsync(string) {
     let response = await fetch(string);
     let data = await response.json();
     return data;
   }
+
   componentDidMount() {
-    // console.log(date.getDate());
-    let date = new Date();
-    this.getStylistDate(date.getDate())
+    this.getStylistDate();
+    this.getHour();
 
   }
-  getStylistDate = (date) => {
-    this.state.dateSelect != date && this.getDataAsync(
-      `https://3sgus10dig.execute-api.ap-southeast-1.amazonaws.com/Prod/api-booking/stylist?salonId=${this.props.salonId
-      }&workDate=${date}-${this.state.date.getMonth() + 1
-      }-${this.state.date.getFullYear()}&customerPhone=${this.props.phone}`
-    ).then((data) => this.setState({ stylists: data, dateSelect: date }));
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.dateSelect !== this.state.dateSelect||prevState.stylistSelected !== this.state.stylistSelected ) {
+      this.getStylistDate();
+      this.getHour();
+
+
+    }
+    }
+  getStylistDate = () => {
+    let search = qs.parse(this.props.location.search);
+    this.getDataAsync(
+      `https://3sgus10dig.execute-api.ap-southeast-1.amazonaws.com/Prod/api-booking/stylist?salonId=${search.salonId
+      }&workDate=${this.state.dateSelect}-${this.state.date.getMonth() + 1
+      }-${this.state.date.getFullYear()}&customerPhone=${search.phone}`
+    ).then((data) => this.setState({ stylists: data}));
   }
+
+  getHour = () => {
+    let search = qs.parse(this.props.location.search);
+    this.getDataAsync(
+      `https://3sgus10dig.execute-api.ap-southeast-1.amazonaws.com/Prod/api-booking/fifteen-minutes/book-hours-group?stylistId=${this.state.stylistSelected}&salonId=${search.salonId
+      }&bookDate=${this.state.dateSelect}-${this.state.date.getMonth() + 1
+      }-${this.state.date.getFullYear()}&customerPhone=${search.phone}`
+    ).then((data) => this.setState({ hours: data}));
+  }
+
   loadStylist = () => {
-    console.log(this.state);
     let result = this.state.stylists.map((val, key) => (
-      <div className="swiper-slide item" style={{ width: "91.8605px" }} key={key}>
+      <div className= {`swiper-slide item ${this.state.stylistSelected == val.staffId && "isActive"}`} style={{ width: "91.8605px" }} key={key} onClick={()=>this.staffSelect(val.staffId)} >
         <div className="content-center-middle">
           <div className="relative">
             <img
@@ -81,6 +115,11 @@ class StyleListAndOptions extends Component {
               }
               alt="Icon"
             />
+            {this.state.stylistSelected == val.staffId && <img
+                      className="icon-check-default"
+                      src="https://30shine.com/static/media/checkYellow.02dbd103.svg"
+                      alt=""
+                    />}
           </div>
         </div>
         <div>
@@ -91,6 +130,22 @@ class StyleListAndOptions extends Component {
     return result;
   };
 
+  loadHour = () => {
+    return this.state.hours.hourGroup && this.state.hours.hourGroup.map((val) =>
+      <div
+        style={{ width: "85.8462px", margin:"60px" }} key={val.name}
+      >
+        {
+          val.hours.map(hour=>
+            <div key={hour.hour} style={{marginRight: '5px'}} className=  {`box-time_item ${!hour.isFree ? "unavailable": this.state.hourSelected==hour.hour&& "has-choice"}` } onClick={()=> this.setState({hourSelected:hour.hour})}>{hour.hour}</div>
+          )
+        }
+      </div>
+    )
+  }
+  staffSelect =(staffId)=>{
+    this.setState({stylistSelected:staffId})
+  }
 
 
 
@@ -109,7 +164,7 @@ class StyleListAndOptions extends Component {
                     >
                       <div
                         className="name-day"
-                        onClick={() => this.getStylistDate(this.state.date.getDate())}
+                        onClick={() => this.setState({dateSelect:this.state.date.getDate()})}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
@@ -124,7 +179,7 @@ class StyleListAndOptions extends Component {
                     >
                       <div
                         className="name-day"
-                        onClick={() => this.getStylistDate(this.state.date.getDate() + 1)}
+                        onClick={() => this.setState({dateSelect:this.state.date.getDate()+1})}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
@@ -139,7 +194,7 @@ class StyleListAndOptions extends Component {
                     >
                       <div
                         className="name-day"
-                        onClick={() => this.getStylistDate(this.state.date.getDate() + 2)}
+                        onClick={() => this.setState({dateSelect:this.state.date.getDate()+2})}
                         style={{
                           fontWeight: "bold",
                           textTransform: "uppercase",
@@ -156,7 +211,7 @@ class StyleListAndOptions extends Component {
           <div className="title padding-10 h2">1. CHỌN STYLIST</div>
           <div className="stylist" id="stylist">
             <div className="content ">
-              <div className="left isActive">
+              <div className={`left ${this.state.stylistSelected ==0 &&"isActive"}`} onClick={()=>this.setState({stylistSelected:0})}>
                 <div>
                   <div className="user-default relative">
                     <img
@@ -164,11 +219,12 @@ class StyleListAndOptions extends Component {
                       src="https://30shine.com/static/media/account_circle%20-%20yellow.d917c981.svg"
                       alt="Icon"
                     />
-                    <img
+                    {this.state.stylistSelected ==0 && <img
                       className="icon-check-default"
                       src="https://30shine.com/static/media/checkYellow.02dbd103.svg"
                       alt=""
-                    />
+                    />}
+                    
                   </div>
                 </div>
                 <div>
@@ -192,15 +248,14 @@ class StyleListAndOptions extends Component {
                     className="icon-btn"
                   />
                 </div> */}
-                <div className="swiper-container swiper-container-initialized swiper-container-horizontal">
+                <div >
                   <div
-                    className="swiper-wrapper"
                     style={{ transform: "translate3d(0px, 0px, 0px)" }}
                   >
 
-                    <Swiper {...params} ref={ref}>
+                    <Slider {...{...settings1,slidesToShow:5}}>
                       {this.loadStylist()}
-                    </Swiper>
+                    </Slider>
                   </div>
                   <span
                     className="swiper-notification"
@@ -252,177 +307,20 @@ class StyleListAndOptions extends Component {
           </div>
           <div id="box-time" className="padding-10">
             <div className>
-              <div className="swiper-container swiper-container-initialized swiper-container-horizontal">
+              <div className="container ">
                 <div
-                  className="swiper-wrapper"
+                  // className=""
                   style={{
                     transitionDuration: "0ms",
                     transform: "translate3d(0px, 0px, 0px)",
                   }}
                 >
-                  <div
-                    className="swiper-slide box-time_gr swiper-slide-active"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item unavailable  ">7h30</div>
-                    <div className="box-time_item unavailable  ">7h40</div>
-                    <div className="box-time_item   ">7h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr swiper-slide-next"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item unavailable  ">8h00</div>
-                    <div className="box-time_item   ">8h15</div>
-                    <div className="box-time_item unavailable  ">8h20</div>
-                    <div className="box-time_item unavailable  ">8h30</div>
-                    <div className="box-time_item unavailable  ">8h40</div>
-                    <div className="box-time_item   ">8h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item unavailable  ">9h00</div>
-                    <div className="box-time_item   ">9h15</div>
-                    <div className="box-time_item unavailable  ">9h20</div>
-                    <div className="box-time_item   ">9h30</div>
-                    <div className="box-time_item unavailable  ">9h40</div>
-                    <div className="box-time_item   ">9h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">10h00</div>
-                    <div className="box-time_item   ">10h15</div>
-                    <div className="box-time_item unavailable  ">10h20</div>
-                    <div className="box-time_item   ">10h30</div>
-                    <div className="box-time_item unavailable  ">10h40</div>
-                    <div className="box-time_item   ">10h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">11h00</div>
-                    <div className="box-time_item   ">11h15</div>
-                    <div className="box-time_item unavailable  ">11h20</div>
-                    <div className="box-time_item   ">11h30</div>
-                    <div className="box-time_item unavailable  ">11h40</div>
-                    <div className="box-time_item   ">11h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">12h00</div>
-                    <div className="box-time_item   ">12h15</div>
-                    <div className="box-time_item unavailable  ">12h20</div>
-                    <div className="box-time_item   ">12h30</div>
-                    <div className="box-time_item unavailable  ">12h40</div>
-                    <div className="box-time_item   ">12h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">13h00</div>
-                    <div className="box-time_item   ">13h15</div>
-                    <div className="box-time_item unavailable  ">13h20</div>
-                    <div className="box-time_item   ">13h30</div>
-                    <div className="box-time_item unavailable  ">13h40</div>
-                    <div className="box-time_item   ">13h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">14h00</div>
-                    <div className="box-time_item   ">14h15</div>
-                    <div className="box-time_item unavailable  ">14h20</div>
-                    <div className="box-time_item   ">14h30</div>
-                    <div className="box-time_item unavailable  ">14h40</div>
-                    <div className="box-time_item   ">14h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">15h00</div>
-                    <div className="box-time_item   ">15h15</div>
-                    <div className="box-time_item unavailable  ">15h20</div>
-                    <div className="box-time_item   ">15h30</div>
-                    <div className="box-time_item unavailable  ">15h40</div>
-                    <div className="box-time_item   ">15h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">16h00</div>
-                    <div className="box-time_item   ">16h15</div>
-                    <div className="box-time_item unavailable  ">16h20</div>
-                    <div className="box-time_item   ">16h30</div>
-                    <div className="box-time_item unavailable  ">16h40</div>
-                    <div className="box-time_item   ">16h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">17h00</div>
-                    <div className="box-time_item   ">17h15</div>
-                    <div className="box-time_item unavailable  ">17h20</div>
-                    <div className="box-time_item   ">17h30</div>
-                    <div className="box-time_item unavailable  ">17h40</div>
-                    <div className="box-time_item   ">17h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">18h00</div>
-                    <div className="box-time_item   ">18h15</div>
-                    <div className="box-time_item unavailable  ">18h20</div>
-                    <div className="box-time_item   ">18h30</div>
-                    <div className="box-time_item unavailable  ">18h40</div>
-                    <div className="box-time_item   ">18h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">19h00</div>
-                    <div className="box-time_item   ">19h15</div>
-                    <div className="box-time_item unavailable  ">19h20</div>
-                    <div className="box-time_item   ">19h30</div>
-                    <div className="box-time_item unavailable  ">19h40</div>
-                    <div className="box-time_item   ">19h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item   ">20h00</div>
-                    <div className="box-time_item   ">20h15</div>
-                    <div className="box-time_item unavailable  ">20h20</div>
-                    <div className="box-time_item   ">20h30</div>
-                    <div className="box-time_item unavailable  ">20h40</div>
-                    <div className="box-time_item   ">20h45</div>
-                  </div>
-                  <div
-                    className="swiper-slide box-time_gr"
-                    style={{ width: "85.8462px", marginRight: "8px" }}
-                  >
-                    <div className="box-time_item unavailable  ">21h00</div>
-                    <div className="box-time_item unavailable  ">21h15</div>
-                    <div className="box-time_item unavailable  ">21h20</div>
-                    <div className="box-time_item unavailable  ">21h30</div>
-                    <div className="box-time_item unavailable  ">21h40</div>
-                    <div className="box-time_item unavailable  ">21h45</div>
-                  </div>
-                </div>
+                  <Slider {...settings1}>
+                  { this.loadHour()}
+
+                  </Slider>
+
+                      </div>
                 <span
                   className="swiper-notification"
                   aria-live="assertive"
@@ -434,7 +332,9 @@ class StyleListAndOptions extends Component {
             <div className />
           </div>
         </div>
-        <Information />
+        <Information
+          location={this.props.location}
+        />
       </Fragment>
     );
   }

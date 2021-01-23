@@ -43,5 +43,10 @@
         "id": 340,
         "name": "Hướng dẫn tự vuốt sáp tại nhà",
         "image": "string"
+    },
+    {
+        "id": 347,
+        "name": "Anh đang vội, bỏ bớt thời gian gội, muốn cắt sớm",
+        "image": "string"
     }
 ]
