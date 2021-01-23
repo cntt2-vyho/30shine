@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Information from './Information';
+import { back } from './utils/notification';
 
 class StyleListAndOptions extends Component {
     render() {
@@ -7,7 +8,7 @@ class StyleListAndOptions extends Component {
             <Fragment>
 
                 <div className="top-navigator pointer">
-                    <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" />
+                    <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt=""  onClick={() => back(this.props.location, this.props.history)}/>
                     <span className="uppercase">Chọn giờ cắt</span>
                 </div>
 

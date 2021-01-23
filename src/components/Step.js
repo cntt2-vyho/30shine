@@ -28,7 +28,7 @@ class Step extends Component {
                 result = <Services location={this.props.location} history={this.props.history} />;
                 break;
             case 2:
-                result = <StyleListAndOptions />;
+                result = <StyleListAndOptions  location={this.props.location} history={this.props.history}/>;
                 break;
             case 3:
                 result = <Finish location={this.props.location} history={this.props.history} />;

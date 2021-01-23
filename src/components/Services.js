@@ -7,6 +7,7 @@ import 'swiper/swiper-bundle.css';
 
 
 import { connect } from "react-redux";
+import {back}  from './utils/notification';
 
 class Services extends Component {
 
@@ -60,6 +61,8 @@ class Services extends Component {
             </div>
         }
     }
+
+   
 
     componentDidMount() {
         let ahihi = [];
@@ -173,6 +176,7 @@ class Services extends Component {
             slidesToScroll: 2,
             rows: 2,
         };
+        console.log(this.props.history);
 
 
 
@@ -181,7 +185,7 @@ class Services extends Component {
         return (
             <Fragment>
                 <div className="top-navigator pointer">
-                    <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" />
+                    <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" onClick={() => back(this.props.location, this.props.history)} />
                     <span className="uppercase">Chọn dịch vụ</span>
                 </div>
                 <div className="service-step2">

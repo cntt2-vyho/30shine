@@ -3,6 +3,7 @@ import Information from "./Information";
 import qs from "query-string";
 
 import 'swiper/swiper-bundle.css';
+import { back } from "./utils/notification";
 
 
 class Finish extends Component {
@@ -103,7 +104,10 @@ class Finish extends Component {
 
                     }
 
-                    <div className="top-navigator pointer"><img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt="" /><span className="uppercase">Hoàn tất</span></div>
+                    <div className="top-navigator pointer">
+                        <img src="https://30shine.com/static/media/chevronLeft.2bd58db5.svg" alt=""  onClick={() => back(this.props.location, this.props.history)} />
+                        <span className="uppercase">Hoàn tất</span>
+                        </div>
                     <div className="extension">
                         <div className="note-extension">
                             <h2 className="title-big">LƯU Ý:</h2>
