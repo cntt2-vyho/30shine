@@ -3,89 +3,57 @@ import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      phone : ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            phone: '',
+            validated: false
+        }
     }
-  }
-  redirectBooking  = () => {
-    const newQueryParam = {
-      phone: this.state.phone,
-      salonId:0,
-      step:0,
-    };
-    this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
+    redirectBooking = () => {
+        const newQueryParam = {
+            phone: this.state.phone,
+            salonId: 0,
+            step: 0,
+        };
+        this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
 
-  }
-  phoneBook = (event) => {
-    // console.log(event);
-   if( event.type=='keypress' && event.key == "Enter")
-     { 
-      this.redirectBooking();
     }
-    else if(event.type=='change'){
-      this.setState({
-        [event.target.name]: event.target.value
-      });
+    phoneBook = (event) => {
+        // console.log(event);
+        if (event.type == 'keypress' && event.key == "Enter") {
+            this.redirectBooking();
+        }
+        else if (event.type == 'change') {
+            this.setState({
+                [event.target.name]: event.target.value
+            });
+        }
     }
-}
-
 
     render() {
+        const { phone } = this.state;
         return (
-            <div className="input-sologan">
-                <div className="input-phone">
-                    <div className="input-text">
-                        <div className="icon">
-                            <img
-                                src="https://storage.30shine.com/ResourceWeb/data/images/Trangchu/item_call.png"
-                                alt="Icon"
-                            />
-                            <img
-                                src="https://storage.30shine.com/ResourceWeb/data/images/Trangchu/gachh.png"
-                                alt="Icon"
-                                className="right"
-                            />
-                        </div>
-                        <input
-                            placeholder="* Nhập số điện thoại (vd: 0987xxxxxx)"
-                            type="tel"
-                            className="my-input"
-                            name= "phone"
-                            onKeyPress={(event) => this.phoneBook(event)}
-                        />
-                    </div>
-                    <div
-                        style={{ display: "flex", textAlign: "center", marginTop: "10px" }}
-                    >
-                        <div className="btn-booking" onClick={() => this.redirectBooking()}>
-                            <div>
-                                <span className="booking-text">
-                                    ĐẶT LỊCH GIỮ CHỖ &nbsp;
-                  <img
-                                        src="https://storage.30shine.com/ResourceWeb/data/images/click1.png"
-                                        alt="click"
-                                        style={{
-                                            width: "30px",
-                                            height: "30px",
-                                            marginBottom: "5px",
-                                            verticalAlign: "middle",
-                                        }}
-                                    />
-                                </span>
-                            </div>
-                            <span className="cancle">
-                                Cắt xong trả tiền, Hủy lịch không sao
-              </span>
-                        </div>
-                        <div className="btn-history">XEM LẠI LỊCH ANH ĐÃ ĐẶT</div>
-                    </div>
+            <div className="new-home__form-input">
+                <div className="form-input__slogan">
+                    <div className="slogan__title">Tóc đẹp ĐÓN TẾT TÂN SỬU CÙNG 30SHINE</div>
+                    <div className="slogan__text">Cắt xong trả tiền, hủy lịch không sao</div>
                 </div>
-                <div className="sologan">
-                    <span>Muốn đẹp trai - Đến 30Shine</span>
+                <div className="form-input__form flex">
+                    <div className="form__input">
+                        <input 
+                        placeholder="Nhập số điện thoại để đặt lịch" 
+                        type="tel" 
+                        className="my-input" 
+                        // defaultValue="0903.900.987" 
+                        onKeyPress={(event) => this.phoneBook(event)} />
+                    </div>
+                    <div className="form__button btn-action btn-color-1 content-center-middle">
+                        <div className="btn-booking" onClick={() => this.redirectBooking()}> ĐẶT LỊCH NGAY</div>
+                    </div>
                 </div>
             </div>
+
         );
     }
 }
