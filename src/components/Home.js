@@ -1,91 +1,77 @@
 import React, { Component } from "react";
-import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
 
+import NumberFormat from "react-number-format";
+
+
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      phone : ''
-    }
-  }
-  redirectBooking  = () => {
-    const newQueryParam = {
-      phone: this.state.phone,
-      salonId:0,
-      step:0,
-    };
-    this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam)});
+    constructor(props) {
+        super(props);
+        this.state = {
+            phone: '',
+            // validated: false,
 
-  }
-  phoneBook = (event) => {
-    // console.log(event);
-   if( event.type=='keypress' && event.key == "Enter")
-     { 
-      this.redirectBooking();
+            // regexp: /^[0-9\b]+$/
+        }
     }
-    else if(event.type=='change'){
-      this.setState({
-        [event.target.name]: event.target.value
-      });
-    }
-}
 
+    // onHandleTelephoneChange = e => {
+    //     let telephone = e.target.value;
+
+    //     // if value is not blank, then test the regex
+    //     if (telephone === '' || this.state.regexp.test(telephone)) {
+    //         this.setState({ [e.target.name]: telephone })
+    //     }
+    // };
+
+
+    redirectBooking = () => {
+        const newQueryParam = {
+            phone: this.state.phone,
+            salonId: 0,
+            step: 0,
+        };
+        this.props.history.push({ pathname: '/booking', search: qs.stringify(newQueryParam) });
+
+    }
+    phoneBook = (event) => {
+        event.key == "Enter" && this.redirectBooking();
+    }
+    changeValue = (value) => {
+        this.setState({
+            phone: value
+        })
+    }
 
     render() {
+        const { phone } = this.state;
+
+
+        console.log('phone: ', phone);
         return (
-            <div className="input-sologan">
-                <div className="input-phone">
-                    <div className="input-text">
-                        <div className="icon">
-                            <img
-                                src="https://storage.30shine.com/ResourceWeb/data/images/Trangchu/item_call.png"
-                                alt="Icon"
-                            />
-                            <img
-                                src="https://storage.30shine.com/ResourceWeb/data/images/Trangchu/gachh.png"
-                                alt="Icon"
-                                className="right"
-                            />
-                        </div>
-                        <input
-                            placeholder="* Nhập số điện thoại (vd: 0987xxxxxx)"
-                            type="tel"
+            <div className="new-home__form-input">
+                <div className="form-input__slogan">
+                    <div className="slogan__title">Tóc đẹp ĐÓN TẾT TÂN SỬU CÙNG 30SHINE</div>
+                    <div className="slogan__text">Cắt xong trả tiền, hủy lịch không sao</div>
+                </div>
+                <div className="form-input__form flex">
+                    <div className="form__input">
+                        <NumberFormat
+                            placeholder="Nhập số điện thoại để đặt lịch"
                             className="my-input"
-                            name= "phone"
+                            value={phone}
+                            onValueChange={(value) => this.changeValue(value.value)}
+                            name="phone"
                             onKeyPress={(event) => this.phoneBook(event)}
+                            format="#### ### ###"                            
                         />
                     </div>
-                    <div
-                        style={{ display: "flex", textAlign: "center", marginTop: "10px" }}
-                    >
-                        <div className="btn-booking" onClick={() => this.redirectBooking()}>
-                            <div>
-                                <span className="booking-text">
-                                    ĐẶT LỊCH GIỮ CHỖ &nbsp;
-                  <img
-                                        src="https://storage.30shine.com/ResourceWeb/data/images/click1.png"
-                                        alt="click"
-                                        style={{
-                                            width: "30px",
-                                            height: "30px",
-                                            marginBottom: "5px",
-                                            verticalAlign: "middle",
-                                        }}
-                                    />
-                                </span>
-                            </div>
-                            <span className="cancle">
-                                Cắt xong trả tiền, Hủy lịch không sao
-              </span>
-                        </div>
-                        <div className="btn-history">XEM LẠI LỊCH ANH ĐÃ ĐẶT</div>
+                    <div className="form__button btn-action btn-color-1 content-center-middle">
+                        <div className="btn-booking" onClick={() => this.redirectBooking()}> ĐẶT LỊCH NGAY</div>
                     </div>
                 </div>
-                <div className="sologan">
-                    <span>Muốn đẹp trai - Đến 30Shine</span>
-                </div>
             </div>
+
         );
     }
 }
