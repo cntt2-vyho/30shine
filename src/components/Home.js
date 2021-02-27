@@ -1,15 +1,30 @@
 import React, { Component } from "react";
-import { NavLink, Redirect } from "react-router-dom";
 import qs from "query-string";
+
+import NumberFormat from "react-number-format";
+
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             phone: '',
-            validated: false
+            // validated: false,
+
+            // regexp: /^[0-9\b]+$/
         }
     }
+
+    // onHandleTelephoneChange = e => {
+    //     let telephone = e.target.value;
+
+    //     // if value is not blank, then test the regex
+    //     if (telephone === '' || this.state.regexp.test(telephone)) {
+    //         this.setState({ [e.target.name]: telephone })
+    //     }
+    // };
+
+
     redirectBooking = () => {
         const newQueryParam = {
             phone: this.state.phone,
@@ -20,19 +35,19 @@ class Home extends Component {
 
     }
     phoneBook = (event) => {
-        // console.log(event);
-        if (event.type == 'keypress' && event.key == "Enter") {
-            this.redirectBooking();
-        }
-        else if (event.type == 'change') {
-            this.setState({
-                [event.target.name]: event.target.value
-            });
-        }
+        event.key == "Enter" && this.redirectBooking();
+    }
+    changeValue = (value) => {
+        this.setState({
+            phone: value
+        })
     }
 
     render() {
         const { phone } = this.state;
+
+
+        console.log('phone: ', phone);
         return (
             <div className="new-home__form-input">
                 <div className="form-input__slogan">
@@ -41,12 +56,15 @@ class Home extends Component {
                 </div>
                 <div className="form-input__form flex">
                     <div className="form__input">
-                        <input 
-                        placeholder="Nhập số điện thoại để đặt lịch" 
-                        type="tel" 
-                        className="my-input" 
-                        // defaultValue="0903.900.987" 
-                        onKeyPress={(event) => this.phoneBook(event)} />
+                        <NumberFormat
+                            placeholder="Nhập số điện thoại để đặt lịch"
+                            className="my-input"
+                            value={phone}
+                            onValueChange={(value) => this.changeValue(value.value)}
+                            name="phone"
+                            onKeyPress={(event) => this.phoneBook(event)}
+                            format="#### ### ###"                            
+                        />
                     </div>
                     <div className="form__button btn-action btn-color-1 content-center-middle">
                         <div className="btn-booking" onClick={() => this.redirectBooking()}> ĐẶT LỊCH NGAY</div>

@@ -8,8 +8,27 @@ class Done extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            allSalon: []
         }
+    }
+
+    async getDataAsync(string) {
+        let response = await fetch(string);
+        let data = await response.json();
+        return data;
+    }
+
+    componentDidMount() {
+
+        let ahihi = [];
+        this.getDataAsync(`https://storage.30shine.com/web/v3/configs/get_all_salon.json`).then(data => {
+
+            ahihi = data.data;
+            this.setState({
+                allSalon: ahihi
+            })
+        })
     }
 
     cancel = () => {
@@ -37,8 +56,8 @@ class Done extends Component {
 
     render() {
         console.log(this.props.location);
-        const { show } = this.state;
-        console.log(((this.props.location.state.search)));
+        const { show, allSalon } = this.state;
+        console.log(((this.props.location.state.search.salonId)));
         return (
             <div className="booking-done">
 
@@ -90,7 +109,7 @@ class Done extends Component {
                         <div className="ant-row box-item">
                             <div className="ant-col ant-col-10">
                                 <div className="title flex"><img src="https://30shine.com/static/media/phone.bed84f7a.svg" alt="" /><span>SỐ ĐIỆN THOẠI</span></div>
-                                <div className="content">0987.775.432</div>
+                                <div className="content">{this.props.location.state.search.phone}</div>
                             </div>
                             <div className="ant-col ant-col-8">
                                 <div className="title flex"><img src="https://30shine.com/static/media/calendar.0b480c66.svg" alt="" /><span>NGÀY</span></div>
@@ -109,7 +128,13 @@ class Done extends Component {
                                         <img src="https://30shine.com/static/media/navigate.6059c7f8.svg" alt="" />Chỉ đường</a>
                                     <a href="tel:1800.28.28.30" className="map-navigate"><img src="https://30shine.com/static/media/phone.70edac5b.svg" alt="" />Gọi</a></div>
                             </div>
-                            <div className="content">236 Dương Bá Trạc, Phường 2, Quận 8, HCM</div>
+
+                            {allSalon.map(v => {
+                                    if (v.id == this.props.location.state.search.salonId) {
+                                        return <div className="content">{v.addressNew}</div>
+                                    }
+                                })}
+                            
                         </div>
                         <div className="flex space-between">
                             <div className="box-item">
