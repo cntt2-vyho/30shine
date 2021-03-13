@@ -63,7 +63,7 @@ class Home extends Component {
                             onValueChange={(value) => this.changeValue(value.value)}
                             name="phone"
                             onKeyPress={(event) => this.phoneBook(event)}
-                            format="#### ### ###"                            
+                            format="####.###.###"                            
                         />
                     </div>
                     <div className="form__button btn-action btn-color-1 content-center-middle">
